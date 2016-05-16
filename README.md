@@ -56,5 +56,6 @@ An uninterruptible power supply (UPS) is a device that allows a computer to keep
 ####References
 http://searchtelecom.techtarget.com
 ...
-
+###creating and using ssh keys
+last week I learned how to create and use ssh keys using the command: sudo ssh-keygen -t rsa,this command should be typed on a commandline terminal.  
 
