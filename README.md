@@ -63,6 +63,11 @@ SSH is sometimes refered to as  Secure Socket Shell, is a network protocol that 
 last week I learned how to create and use ssh keys using the command: sudo ssh-keygen -t rsa,this command should be typed on a commandline terminal.This command generates two keys, one is a private key and the other is a public key. A private key should remain with the authorised user whereas the public key must be known to the server. 
 ###what is a private and a public?
 It is important to understand cryptography in order to understand how the private and public key works.
+
 crytography is a method of storing and transmitting data in a particulat form so that only those for whom it is intended can read and process it. In order for us to use this method we need a private and a public key.
+
 A public key is a cryptographic key that can be obtained and used by anyone to encrypt messages intended for a particular recipient, such that the encrypted messages can be deciphered only by using the second key that is known only to the recipient (the private key).
+
 A private key or secret key is an encryption/decryption key known only to the party or parties that exchange secret messages.
+
+
