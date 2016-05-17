@@ -43,14 +43,14 @@ basically, the network components  would be the routers, the switches, hubs, bri
 ### Server cabinet 
 The server cabinet is where we put our switches, routers, network-attached-storage and uninterruptible-power-supply.
 
-#### what is a switch?
+### what is a switch?
 In a telecommunications network, a switch is a device that channels incoming data from any of multiple input ports to the specific output port that will take the data toward its intended destination.
-#### what is a router?
+### what is a router?
 A router is a device that forwards data packets along networks. A router is connected to at least two networks, commonly two LANs or WANs or a LAN and its ISP's network. Routers are located at gateways, the places where two or more networks connect.
-#### what is a network-attached-storage?
+### what is a network-attached-storage?
 network-attached-storage also called a nas, is a file-level computer data storage server connected to a computer network providing data access to a heterogeneous group of clients. NAS is specialised for serving files either by its hardware, software, or configuratoin.
 
-#### what is a uninterruptible-power-supply?
+### what is a uninterruptible-power-supply?
 An uninterruptible power supply (UPS) is a device that allows a computer to keep running for at least a short time when the primary power source is lost. It also provides protection from power surges.
 
 #####References
