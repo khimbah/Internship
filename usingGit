@@ -1,0 +1,49 @@
+How To Use Git
+
+###what is git?
+
+Git is a version control system. This means that it keeps track of what changes are taking place on a project at hand. It keep track of what changes take place on a project, and who made them and when were the changes made. Git is mostly used by software developers to keep track of the their progress and is helpful in debugging if or when bugs appear, then their cause can be easily tracked by looking at a hitory of a series of changes that took place where specifically did trouble start. Git helps us organize our work and be able to focus our energy on the project at hand.
+
+###Commands used in git
+
+There are commands that must be used in order to get the benefits of using git.
+
+These commands are:
+
+git init
+-initiates a repository.
+
+git status
+-used to check your current changes and your progress.
+
+git add
+-used to stage a file into the staging area
+
+git commit
+-this command is used for storing our staged changes.
+
+git push
+-updates remote files using local ones, while sending objects necessary to complete the given files
+
+git pull
+-Incorporates changes from a remote repository into the current branch. git pull does a git fetch followed by a git merge.
+ 
+git reset
+-to unstage a file from a stage area
+
+git branch
+-to create a new branch
+
+git checkout -- <file>
+-to undo changes that were done on a file
+
+git checkout <branch_name>
+-for switching btn branches
+
+git rm
+-for removing files
+
+git commit -m "<short_msg_abt_changes>"
+
+ 
+    
