@@ -1,0 +1,42 @@
+To identify your router and gateway ip addresses
+khumbulani@kartoza:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+
+khumbulani@kartoza:~$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+
+khumbulani@kartoza:~$ netstat -nr
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+khumbulani@kartoza:~$ ping -c 4 ip_address
+PING 0.0.0.0 (0.0.0.0) 56(84) bytes of data.
+64 bytes from 0.0.0.0: icmp_seq=1 ttl=64 time=0.361 ms
+64 bytes from 0.0.0.0: icmp_seq=2 ttl=64 time=0.304 ms
+64 bytes from 0.0.2.1: icmp_seq=3 ttl=64 time=0.286 ms
+64 bytes from 0.0.0.0: icmp_seq=4 ttl=64 time=0.293 ms
+
+--- 0.0.0.0 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 2998ms
+rtt min/avg/max/mdev = 0.286/0.311/0.361/0.029 ms
+
+http://www.cyberciti.biz/faq/how-to-find-gateway-ip-address/
+
+To identify your public ip address,do one of these:
+
+curl ident.me
+
+curl ifconfig.me
+
+curl tnx.nl/ip
+
+curl icanhazip.com
+
+curl ipecho.net/plain
+
+curl ip.appspot.com
+
+curl whatsmyip.akamai.com
+
+http://www.yourownlinux.com/2014/01/how-to-determine-your-public-ip-address-from-linux-terminal.html
