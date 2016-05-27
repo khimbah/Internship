@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Hello $USER"
+echo "Hey i am" $USER "and will be telling you about the current processes"
+echo "This is the list of files and directories that I have in my home folder"
+ls -al
+echo "Running processes List"
+ps -e
+exit 0

@@ -1,0 +1,20 @@
+My work Journal
+
+What I did today_thursday 05-may-2016
+
+what I did at the beginning of the day:
+
+focus of the day: to sort every issue partaining network connection and to run a backup for Petra's system.
+I sorted out the connection problem on Suzannes port...made extra cabling for the printer and Suzanne's pc. 
+I made a backup for Petra's desktop. I learnt something about network file system and rsync.
+Rsync is a tool for copying files to a remote host or computer. Rsync stands for "remote sync", where "sync" stands for synchronization or synchronizer. 
+And network file system is a distributed file system that allows files and/or directories to be mounted on a remote server system.
+ How I ran an rsync: 
+This is the command that I ran on the terminal as super user:
+#sudo su
+#cd /home
+#sudo rsync -av --progress petra/ /nfs-home/petra
+
+
+
+http://onlinecomputerbooks.tradepub.com/?pt=adv&page=CustomGuide

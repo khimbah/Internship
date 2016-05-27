@@ -1,0 +1,21 @@
+Basic Networking
+
+ The Network Interface Card
+
+You have read about the encoding methods to
+transmit digital signals on networks. What about the
+hardware that makes this possible? Any computer that
+operates in a network environment uses a Network
+Interface Card (NIC) to convert signals processed in a
+computer, to signals that meet standards for the
+network. The device may also have a facility to
+convert signals from one network standard to
+another.
+
+The NIC’s conversion process is straightforward, but
+the technology is quite complex. In brief, the sender
+NIC temporarily stores the computer’s digital signals,
+encodes them and then generates the voltage for
+transmission on the network. The process operates in
+reverse at the receiver NIC. The network cable plugs
+in to the front panel of the NIC.

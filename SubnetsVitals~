@@ -1,0 +1,31 @@
+What is a Subnet?
+
+a part of a larger network such as the Internet.
+
+References:
+http://searchnetworking.techtarget.com/definition/subnet
+http://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html
+http://gns3vault.com/productsamples/HTMS-V2-SAMPLE.pdf
+https://www.iplocation.net/subnet-mask
+https://www.youtube.com/watch?v=D-l7KAf31NM
+https://www.youtube.com/watch?v=4ci5y4t9f0Q
+https://www.youtube.com/watch?v=a84XIopJFXs
+https://www.youtube.com/watch?v=84-zNmomYzk  #the magic number
+https://www.youtube.com/watch?v=-kAhTal4bNk
+MAC-Media Access Control
+
+What is MAC?
+
+A media access control address (MAC address), also called physical address, is a unique identifier assigned to network interfaces for communications on the physical network segment. MAC addresses are used as a network address for most IEEE 802 network technologies, including Ethernet and WiFi.
+In IP networks, the MAC address of an interface can be queried given the IP address using the Address Resolution Protocol (ARP) for Internet Protocol Version 4 . . . or the Neighbor Discovery Protocol . . . for IPv6
+
+What is an Address Resolution Protocol?
+
+reference: http://searchnetworking.techtarget.com/definition/Address-Resolution-Protocol-ARP
+           https://www.youtube.com/watch?v=xTOyZ6TWQdM
+           https://www.youtube.com/watch?v=hx9ZZivtzEE
+           https://www.youtube.com/watch?v=D-l7KAf31NM
+The Address Resolution Protocol (ARP) is a telecommunication protocol used for resolution of network layer addresses into link layer addresses, a critical function in multiple-access networks.
+
+Subnet Mask
+A Subnet mask is a 32-bit number that masks an IP address, and divides the IP address into network address and host address. Subnet Mask is made by setting network bits to all "1"s and setting host bits to all "0"s.

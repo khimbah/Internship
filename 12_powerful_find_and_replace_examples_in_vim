@@ -1,0 +1,204 @@
+12 Powerful find and replace  examples in vim
+
+This article is part of the on-going Vi / Vim Tips and Tricks series. Vim is commonly mentioned as text editor, not text creator. Why ? Because we spend lot of time editing an existing text than creating new text.  In the text editing, text/pattern substitutions becomes a vital part.
+
+In this article, let us review how to perform both basic and advanced text and pattern substitution features in Vi and Vim Editor. These features are explained using 12 very practical and powerful text substitution examples.
+
+Syntax of the text substitution inside vim editor:
+
+:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
+
+
+Following are three possible flags.
+
+    [c] Confirm each substitution.
+    [g] Replace all occurrences in the line.
+    [i] Ignore case for the pattern.
+
+Example 1. Substitute all occurrences of a text with another text in the whole file
+
+This is the basic fundamental usage of the text substitution inside Vi editor. When you want a specific text to be replaced with another text in the entire file then you can use the following sequence.
+
+:%s/old-text/new-text/g
+
+    %s – specifies all lines. Specifying the range as ‘%’ means do substitution in the entire file.
+    g – specifies all occurrences in the line. With the ‘g’ flag , you can make the whole line to be substituted. If this ‘g’ flag is not used then only first occurrence in the line only will be substituted.
+
+Example 2. Substitution of a text with another text within a single line
+
+When you want a specific text to be replaced with another text within a single line in a case insensitive manner. Specifying no range means, do substitution in the current line only. With the ‘i’ flag, you can make the substitute search text to be case insensitive.
+
+:s/I/We/gi
+
+Example 3. Substitution of a text with another text within a range of lines
+
+With the range, you can make only a range of line to be affected in the substitution. Specifying 1, 10 as range means, do substitution only in the lines 1 – 10.
+
+:1,10s/helo/hello/g
+
+Example 4. Substitution of a text with another text by visual selection of lines
+
+You can also select a specific lines by visually selecting those lines. Press CTRL + V in command mode, use navigation keys to select the part of the file you want to be substituted. Press ‘:’ which will automatically formed as :'<,’> Then you can use the normal substitute as
+
+:'<,'>s/helo/hello/g
+
+Example 5. Substitution of a text with another text only the 1st X number of lines
+
+Using count in substitution, If you specify the count N in the substitution then it means do substitution in N lines from the current position of the cursor. do substitution in 4 lines from the current line.
+
+:s/helo/hello/g 4
+
+Example 6. Substitute only the whole word and not partial match
+
+Let us assume that you want to change only the whole word ‘his’ to ‘her’ in the original text mentioned below. If you do the standard substitution, apart from changing his to her, it will also change This to Ther as shown below.
+Standard Subsitution
+
+Original Text: This is his idea
+
+:s/his/her/g
+
+Translated Text: Ther is her idea
+
+Whole Word Subsitution
+
+Original Text: This is his idea
+
+:s/\<his\>/her/
+
+Translated Text: This is her idea
+
+Note:: You should enclose the word with < and > , which will force the substitution to search only for the full word and not any partial match.
+Example 7. Substitute either word1 or word2 with a new word using regular expression
+
+In the following example, it will translate any occurrences of either good or nice will be replaced with awesome.
+
+Original Text: Linux is good. Life is nice.
+
+:%s/\(good\|nice\)/awesome/g
+
+Translated Text: Linux is awesome. Life is awesome.
+
+
+You can also do substitution by specifying regular expression. Following example does the substitution of hey or hi to hai. Please note that this does not do any substitution for the words ‘they’, ‘this’.
+
+:%s/\<\(hey\|hi\)\>/hai/g
+
+    \< – word boundary.
+    \| – “logical or” (in this case hey or hi)
+
+Example 8. Interactive Find and Replace in Vim Editor
+
+You can perform interactive find and replace using the ‘c’ flag in the substitute, which will ask for confirmation to do substitution or to skip it as explained below. In this example, Vim editor will do a global find the word ‘awesome’ and replace it with ‘wonderful’. But it will do the replacement only based on your input as explained below.
+
+:%s/awesome/wonderful/gc
+
+replace with wonderful (y/n/a/q/l/^E/^Y)?
+
+    y – Will replace the current highlighted word. After replacing it will automatically highlight the next word that matched the search pattern
+    n – Will not replace the current highlighted word. But it will automatically highlight the next word that matched the search pattern
+    a – Will substitute all the highlighted words that matched the search criteria automatically.
+    l – This will replace only the current highlighted word and terminate the find and replace effort.
+
+Example 9. Substituting all lines with its line number.
+
+When the string starts with ‘\=’, it should be evaluated as an expression. Using the ‘line’ function we can get the current line number. By combining both the functionality the substitution does the line numbering of all lines.
+
+:%s/^/\=line(".") . ". "/g
+
+
+Note: This is different from the “:set number” where it will not write the line numbers into the file. But when you use this substitution you are making these line number available inside the file permanently.
+Example 10. Substituting special character with its equivalent value.
+
+Substituting the ~ with $HOME variable value.
+
+Original Text: Current file path is ~/test/
+
+:%s!\~!\= expand($HOME)!g
+
+Translated Text: Current file path is /home/ramesh/test/
+
+You can use expand function to use all available predefined and user defined variables.
+Example 11. Alter sequence number in a numbered list while inserting a new item
+
+Assume that you have a numbered list like the following inside a text file. In this example, let us assume that you want to add a new line after Article 2. For this, you should change the number of all other articles accordingly.
+
+vi / vim tips & tricks series
+Article 1: Vi and Vim Editor: 3 Steps To Enable Thesaurus Option
+Article 2: Vim Autocommand: 3 Steps to Add Custom Header To Your File
+Article 3: 5 Awesome Examples For Automatic Word Completion Using Ctrl-X
+Article 4: Vi and Vim Macro Tutorial: How To Record and Play
+Article 5: Tutorial: Make Vim as Your C/C++ IDE Using c.vim Plugin
+Article 6: How To Add Bookmarks Inside Vim Editor
+Article 7: Make Vim as Your Bash-IDE Using bash-support Plugin
+Article 8: 3 Powerful Musketeers Of Vim Editor ? Macro, Mark and Map
+Article 9: 8 Essential Vim Editor Navigation Fundamentals
+Article 10: Vim Editor: How to Correct Spelling Mistakes Automatically
+Article 11: Transfer the Power of Vim Editor to Thunderbird for Email
+Article 12: Convert Vim Editor to Beautiful Source Code Browser
+
+
+3rd Article “Make Vim as Your Perl IDE Using perl-support.vim Plugin” got missed. So when you want
+to add it, then you want to change “Article 3” to “Article 4”, “Article 4” to “Article 5”, upto “Article 12” to “Article 13”.
+
+This can be achieved by the following vim substitution command.
+
+:4,$s/\d\+/\=submatch(0) + 1/
+
+    Range: 4,$ – 4th line to last line.
+    Pattern to Search – \d\+ – digits sequence
+    Pattern to Replace – \=submatch(0) + 1 – gets the matched pattern and adds 1 to it.
+    Flag – as there is no flag, by default it substitutes only the first occurrence.
+
+
+After executing the substitute statement the file will become like this, where you can
+add the 3rd Article.
+
+vi / vim tips & tricks series
+Article 1: Vi and Vim Editor: 3 Steps To Enable Thesaurus Option
+Article 2: Vim Autocommand: 3 Steps to Add Custom Header To Your File
+Article 4: 5 Awesome Examples For Automatic Word Completion Using Ctrl-X
+Article 5: Vi and Vim Macro Tutorial: How To Record and Play
+Article 6: Tutorial: Make Vim as Your C/C++ IDE Using c.vim Plugin
+Article 7: How To Add Bookmarks Inside Vim Editor
+Article 8: Make Vim as Your Bash-IDE Using bash-support Plugin
+Article 9: 3 Powerful Musketeers Of Vim Editor ? Macro, Mark and Map
+Article 10: 8 Essential Vim Editor Navigation Fundamentals
+Article 11: Vim Editor: How to Correct Spelling Mistakes Automatically
+Article 12: Transfer the Power of Vim Editor to Thunderbird for Email
+Article 13: Convert Vim Editor to Beautiful Source Code Browser
+
+Note: Check the substitution changed the 3 to 4, 4 to 5 and so on. Now we can add a new line mentioning it as Article 3, and no need to do any manual changes.
+Example 12. Substituting the sentence beginnings with upper case. ( i.e title case the entire document ).
+
+While formatting a document, making the title case is also an important thing. It can be done easily with substitution.
+
+:%s/\.\s*\w/\=toupper(submatch(0))/g
+
+    \.\s*\w – Search Pattern – literal . ( dot ) followed by Zero or more space, and a word character.
+    toupper – converts the given text to upper case.
+    submatch(0) – returns the matched pattern.
+
+Text before substitution:
+
+Lot of vi/vim tips and tricks are available at thegeekstuff.com. reading
+these articles will make you very productive. following activities can be
+done very easily using vim editor.
+        a. source code walk through,
+        b. record and play command executions,
+        c. making the vim editor as ide for several languages,
+        d. and several other @ vi/vim tips & tricks.
+
+Text after substitution (Changes are in bold)
+
+Lot of vi/vim tips and tricks are available at thegeekstuff.com. Reading
+these articles will make you very productive. Following activities can be
+done very easily using vim editor.
+        a. Source code walk through,
+        b. Record and play command executions,
+        c. Making the vim editor as ide for several languages,
+        d. And several other @ vi/vim tips & tricks.
+
+Recommended Reading
+
+Vim 101 Hacks, by Ramesh Natarajan. I’m a command-line junkie. So, naturally I’m a huge fan of Vi and Vim editors. Several years back, when I wrote lot of C code on Linux, I used to read all available Vim editor tips and tricks. Based on my Vim editor experience, I’ve written Vim 101 Hacks eBook that contains 101 practical examples on various advanced Vim features that will make you fast and productive in the Vim editor. Even if you’ve been using Vi and Vim Editors for several years and have not read this book, please do yourself a favor and read this book. You’ll be amazed with the capabilities of Vim editor. m!k@i#%ne&sh^i
+

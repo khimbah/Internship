@@ -1,0 +1,7 @@
+Address Classes    Default Subnet Masks
+
+1-127 = Class A    Class A = 255.0.0.0
+
+128-191 = Class B  Class B = 255.255.0.0
+
+192-223 = Class C Class C = 255.255.255.0

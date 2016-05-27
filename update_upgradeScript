@@ -1,0 +1,6 @@
+!#/bin/bash
+
+sudo su && sudo aptitue update && sudo aptitude safe-upgrade;
+sudo reboot;
+exit 0;
+

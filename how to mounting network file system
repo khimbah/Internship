@@ -1,0 +1,57 @@
+23.2. Mounting NFS File Systems
+
+Use the mount command to mount a shared NFS directory from another machine:
+
+mount shadowman.example.com:/misc/export /misc/local
+
+Warning	Warning
+ 	
+
+The mount point directory on local machine (/misc/local in the above example) must exist.
+
+In this command, shadowman.example.com is the hostname of the NFS file server, /misc/export is the directory that shadowman is exporting, and /misc/local is the location to mount the file system on the local machine. After the mount command runs (and if the client has proper permissions from the shadowman.example.com NFS server) the client user can execute the command ls /misc/local to display a listing of the files in /misc/export on shadowman.example.com.
+23.2.1. Mounting NFS File Systems using /etc/fstab
+
+An alternate way to mount an NFS share from another machine is to add a line to the /etc/fstab file. The line must state the hostname of the NFS server, the directory on the server being exported, and the directory on the local machine where the NFS share is to be mounted. You must be root to modify the /etc/fstab file.
+
+The general syntax for the line in /etc/fstab is as follows:
+
+server:/usr/local/pub    /pub   nfs    rsize=8192,wsize=8192,timeo=14,intr
+
+The mount point /pub must exist on the client machine. After adding this line to /etc/fstab on the client system, type the command mount /pub at a shell prompt, and the mount point /pub will be mounted from the server.
+23.2.2. Mounting NFS File Systems using autofs
+
+A third option for mounting an NFS share is the use of autofs. Autofs uses the automount daemon to manage your mount points by only mounting them dynamically when they are accessed.
+
+Autofs consults the master map configuration file /etc/auto.master to determine which mount points are defined. It then starts an automount process with the appropriate parameters for each mount point. Each line in the master map defines a mount point and a separate map file that defines the file systems to be mounted under this mount point. For example, the /etc/auto.misc file might define mount points in the /misc directory; this relationship would be defined in the /etc/auto.master file.
+
+Each entry in auto.master has three fields. The first field is the mount point. The second field is the location of the map file, and the third field is optional. The third field can contain information such as a timeout value.
+
+For example, to mount the directory /proj52 on the remote machine penguin.example.net at the mount point /misc/myproject on your machine, add the following line to auto.master:
+
+/misc   /etc/auto.misc --timeout 60
+
+Add the following line to /etc/auto.misc:
+
+myproject  -rw,soft,intr,rsize=8192,wsize=8192 penguin.example.net:/proj52
+
+The first field in /etc/auto.misc is the name of the /misc subdirectory. This directory is created dynamically by automount. It should not actually exist on the client machine. The second field contains mount options such as rw for read and write access. The third field is the location of the NFS export including the hostname and directory.
+
+Note	Note
+ 	
+
+The directory /misc must exist on the local file system. There should be no subdirectories in /misc on the local file system.
+
+Autofs is a service. To start the service, at a shell prompt, type the following commands:
+
+/sbin/service autofs restart
+
+To view the active mount points, type the following command at a shell prompt:
+
+/sbin/service autofs status
+
+If you modify the /etc/auto.master configuration file while autofs is running, you must tell the automount daemon(s) to reload by typing the following command at a shell prompt:
+
+/sbin/service autofs reload
+
+To learn how to configure autofs to start at boot time, refer to Chapter 21 Controlling Access to Services for information on managing services. 

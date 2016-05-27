@@ -1,0 +1,112 @@
+Understanding Linux Shell
+
+    Shell: A Command-Line Interpretor that connects a user to Operating System and allows to execute the commands or by creating text script.
+    Process: Any task that a user run in the system is called a process. A process is little more complex than just a task.
+    File: It resides on hard disk (hdd) and contains data owned by a user.
+    X-windows aka windows: A mode of Linux where screen (monitor) can be split in small “parts” called windows, that allow a user to do several things at the same time and/or switch from one task to another easily and view graphics in a nice way.
+    Text terminal: A monitor that has only the capability of displaying text stuff, no graphics or a very basic graphics display.
+    Session: Time between logging on and logging out of the system.
+
+Types of Shell on a Standard Linux Distribution
+
+Bourne shell : The Bourne shell was one of the major shells used in early versions and became a de facto standard. It was written by Stephen Bourne at Bell Labs. Every Unix-like system has at least one shell compatible with the Bourne shell. The Bourne shell program name is “sh” and it is typically located in the file system hierarchy at /bin/sh.
+
+C shell: The C shell was developed by Bill Joy for the Berkeley Software Distribution. Its syntax is modelled after the C programming language. It is used primarily for interactive terminal use, but less frequently for scripting and operating system control. C shell has many interactive commands.
+Beginning the Fun! (Linux Shell)
+
+There exist thousands of commands for command-line user, how about remembering all of them? Hmmm! Simply you can not. The real power of computer is to ease the ease your work, you need to automate the process and hence you need scripts.
+
+Scripts are collections of commands, stored in a file. The shell can read this file and act on the commands as if they were typed at the keyboard. The shell also provides a variety of useful programming features to make scripts truly powerful.
+Basics of Shell Programming
+
+    To get a Linux shell, you need to start a terminal.
+    To see what shell you have, run: echo $SHELL.
+    In Linux, the dollar sign ($) stands for a shell variable.
+    The ‘echo‘ command just returns whatever you type in.
+    The pipeline instruction (|) comes to rescue, when chaining several commands.
+    Linux commands have their own syntax, Linux won’t forgive you whatsoever is the mistakes. If you get a command wrong, you won’t flunk or damage anything, but it won’t work.
+    #!/bin/sh – It is called shebang. It is written at the top of a shell script and it passes the instruction to the program /bin/sh.
+
+About shell Script
+
+Shell script is just a simple text file with “.sh” extension, having executable permission.
+Process of writing and executing a script
+
+    Open terminal.
+    Navigate to the place where you want to create script using ‘cd‘ command.
+    Cd (enter) [This will bring the prompt at Your home Directory].
+    touch hello.sh (Here we named the script as hello, remember the ‘.sh‘ extension is compulsory).
+    vi hello.sh (nano hello.sh) [You can use your favourite editor, to edit the script].
+    chmod 744 hello.sh (making the script executable).
+    sh hello.sh or ./hello.sh (running the script)
+
+Writing your First Script
+
+#!/bin/bash
+# My first script
+
+echo "Hello World!"
+
+Save the above lines on a text file, make it executable and run it, as described above.
+Sample Output
+
+Hello World!
+
+In the above code.
+
+#!/bin/bash (is the shebang.)
+# My first script (is comment, anything following '#' is a comment)
+echo “Hello World!” (is the main part of this script)
+
+Writing your Second Script
+
+OK time to move to the next script. This script will tell you, your’s “username” and list the running processes.
+
+#! /bin/bash
+echo "Hello $USER"
+echo "Hey i am" $USER "and will be telling you about the current processes"
+echo "Running processes List"
+ps
+
+Create a file with above codes, save it to anything you want, but with extension “.sh“, make it executable and run it, from you terminal.
+Sample Output
+
+Hello tecmint
+Hey i am tecmint and will be telling you about the current processes
+Running processes List
+  PID TTY          TIME CMD
+ 1111 pts/0    00:00:00 bash
+ 1287 pts/0    00:00:00 sh
+ 1288 pts/0    00:00:00 ps
+
+Was this cool? Writing script is as simple as getting an idea and writing pipelined commands. There are some restrictions, too. Shell scripts are excellent for concise filesystem operations and scripting the combination of existing functionality in filters and command line tools via pipes.
+
+When your needs are greater – whether in functionality, robustness, performance, efficiency etc – then you can move to a more full-featured language.
+
+If you already know C/Perl/Python programming language or any other programming language, learning the scripting language won’t be much difficult.
+Writing your Third Script
+
+Moving to, write our third and last script for this article. This script acts as an interactive script. Why don’t you, yourself execute this simple yet interactive script and tell us how you felt.
+
+#! /bin/bash
+echo "Hey what's Your First Name?";
+read a;
+echo "welcome Mr./Mrs. $a, would you like to tell us, Your Last Name";
+read b;
+echo "Thanks Mr./Mrs. $a $b for telling us your name";
+echo "*******************"
+echo "Mr./Mrs. $b, it's time to say you good bye"
+
+Sample Output
+
+Hey what's Your First Name?
+Avishek
+welcome Mr./Mrs. Avishek, would you like to tell us, Your Last Name
+Kumar
+Thanks Mr./Mrs. Avishek Kumar for telling us your name
+******************************************************
+Mr./Mrs. Kumar, it's time to say you good bye
+
+Well this is not an end. We tried to bring a taste of scripting to you. In our future article we will elaborate this scripting language topic, rather a never ending scripting language topic, to be more perfect. Your valuable thoughts in comments is highly appreciated, Like and share us and help us to spread. Till then just chill, keep connected, stay tuned.
+
+

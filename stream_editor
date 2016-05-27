@@ -1,0 +1,24 @@
+Sed = stream editor
+
+sed performs basic text transformations on an input stream (a file or input from a pipeline) in a single pass through the stream, so it is very efficient. It is sed's ability to filter text in a pipeline...
+
+*sed can be used at the command-line, or within a shell script, to edit a file non-interactively. #Perhaps
+the most useful feature is to do a 'search-and-replace' for one string to another.
+
+You can embed your sed commands into the command-line that invokes sed using the '-e' option, or
+put them in a separate file e.g. 'sed.in' and invoke sed using the '-f sed.in' option.
+
+This latter option is most used if the sed commands are complex and involve lots of regexps! For instance:
+sed -e 's/input/output/' my_file
+will echo every line from my_file to standard output, changing the first occurrence of 'input' on each
+line into 'output'.
+
+# NB sed is line-oriented, so if you wish to change every occurrence on each line,
+then you need to make it a 'greedy' search & replace like so:
+sed -e 's/input/output/g' my_file
+The expression within the /.../ can be a literal string or a regexp.
+
+#NB By default the output is written to stdout. You may redirect this to a new file, or if you want to
+edit the existing file in place you should use the '-i' flag:
+sed -e 's/input/output/' my_file > new_file
+sed -i -e 's/input/output/' my_file 

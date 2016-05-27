@@ -1,0 +1,17 @@
+@khimbah ok so:
+In your ~/.ssh/config put:
+
+Host mountain
+  User <your user name>
+  HostName 196.214.55.116
+  Port 8697
+
+Then go to here:
+https://github.com/inasafe/inasafe-infrastructure/tree/develop/ansible/pub_keys
+Create an account for each user you find there like this:
+
+sudo adduser <username>
+
+Give them a unique password generated from keepass
+then tell each user on gitter their credentials and to use the above setup to log in.
+Tim Sutton

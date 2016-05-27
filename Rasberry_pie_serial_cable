@@ -1,0 +1,27 @@
+USB to TTL Serial Cable - Debug / Console Cable for Raspberry Pi
+
+
+Description
+
+The cable is easiest way ever to connect to your microcontroller/Raspberry Pi/WiFi router serial console port. Inside the big USB plug is a USB<->Serial conversion chip and at the end of the 36" cable are four wire - red power, black ground, white RX into USB port, and green TX out of the USB port. The power pin provides the 5V @ 500mA direct from the USB port and the RX/TX pins are 3.3V level for interfacing with the most common 3.3V logic level chipsets.
+
+Because of the separated pin plugs, this cable is ideal for powering and connecting up to the debug/login console on the Raspberry Pi or BeagleBone Black. Connect the pins as shown to power the Pi or BBB and establish the RX/TX link. Then install the Windows XP/Vista/7 or MacOS X PL2303HX drivers on your computer and connect with a terminal program at 115200 baud. Windows 8 & 10 is now supported! If you're using Windows 7 and you have issues, try this Prolific driver version 1.013. And if you're using an older version of Mac OS X (10.8-10.6) then try this Prolific driver version 1.5.1.
+
+Also handy for hacking WiFi routers to install alternate OS's, or nearly any other 3.3V logic serial port. This is easier to use than an FTDI cable in many cases because the wires are separated. Note that we call this a "TTL cable" (since that's what they're called) but technically it's CMOS logic.
+
+This cable is not good for Arduino re-programming such as a Boarduino, MENTA, Monochron, etc. because it does not have the DTR/RTS wire necessary for initiating the bootloader reboot sequence. For that we suggest an FTDI cable or FTDI friend.
+
+Technical Details
+
+There are four wires: red power, black ground, white RX into USB port, and green TX out of the USB port.
+The power pin provides the 5V @ 500mA direct from the USB port and the RX/TX pins are 3.3V level for interfacing with the most common 3.3V logic level chipsets.
+
+    Windows XP/Vista/7/8/10 or MacOS X 10.9 to 10.11 PL2303 drivers
+    PL2303HX.D datasheet
+    PL2303TA datasheet
+
+Revision History
+
+    Prior to July 1 2014 this cable would come with a PL2303HX chipset and a black USB body. After July 1, 2014 we changed to a violet body and the PL2303TA chipset. The new 'TA cables are Win8 compatible, and are more reliable especially when dealing with random USB-disconnects.
+
+

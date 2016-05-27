@@ -1,0 +1,10 @@
+#!/bin/bash
+
+function! GlobalFunc(pattern,func)
+  let files = glob(a:pattern)
+  while files != ''
+    let file = substitute(files,'^\(.\{-}\)\n.*','\1',"")
+    let files = strpart(files,strlen(file)+1)
+    call {a:func}(file)
+  endwhile
+endfunction

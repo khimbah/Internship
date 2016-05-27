@@ -1,0 +1,8 @@
+what is network file system
+2.1. What is NFS?
+NFS is a way of mounting Linux discs/directories over a network ..
+The Network File System (NFS) was developed to allow machines to mount a disk partition on a remote machine as if it were a local disk. It allows for fast, seamless sharing of files across a network.
+
+It also gives the potential for unwanted people to access your hard drive over the network (and thereby possibly read your email and delete all your files as well as break into your system) if you set it up incorrectly. So please read Section 6, “Security and NFS” of this document carefully if you intend to implement an NFS setup.
+
+There are other systems that provide similar functionality to NFS. Samba (http://www.samba.org) provides file services to Windows clients. The Andrew File System, originally developed by IBM (http://www.openafs.org) and now open-source, provides a file sharing mechanism with some additional security and performance features. The Coda File System (http://www.coda.cs.cmu.edu/) combines file sharing with a specific focus on disconnected clients. Many of the features of the Andrew and Coda file systems are slated for inclusion in the next version of NFS (Version 4) (http://www.nfsv4.org). The advantage of NFS today is that it is mature, standard, well understood, and supported robustly across a variety of platforms. 

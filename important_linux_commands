@@ -1,0 +1,6 @@
+
+How to search for the latest installed programmes 
+
+cat /var/log/dpkg.log | grep "\ install\ "
+cat /var/log/apt/history.log | grep "\ install\ "
+awk '$3~/^install$/ {print $4;}' /var/log/dpkg.log

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+myVar= "this is not really hard to understand"
+echo $myVar
+echo "Hello World!"
+exit 0 
