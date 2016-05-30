@@ -1,0 +1,14 @@
+
+1. I created a backup script to backup Petra's system so that she doesn't important files.
+   I did that by running an rsync and update command on the ubuntu terminal.
+   The aim was to install the Simple Scan version 3.18.2 but this happened to have a probrem running on Petra's ubuntu version 14.04.
+2. We had to upgrade Petra's ubuntu to version 15.10 so that we can actually install and run Simple Scan 3.18.2
+   I first had a hard time doing this. many times I did silly mistakes but thank God I had a very good support. All that was accomplished.
+3. Extra cabling was needed so I had make extra cables so that every one might be connected to the internet.
+4. Installing keepassx
+5. Creating ssh keys and creating password database on keepassx
+6. I made a research on problem solving and problem deconstruction(approach to problem solving)
+7. Setting up a wireless network
+8. Sort out a ports/plugs problem as more plugs were needed.
+9. Learning how to use Scratct
+10.Learning Git and Git commands 

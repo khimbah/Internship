@@ -1,7 +1,0 @@
-how to run an rsync(for example, on Petra's pc)
-
-run this command:
-cd /home
- sudo rsync -av --progress petra/ /nfs-home/petra
-or
-sudo rsync -avn --progress petra/ /nfs-home/petra
