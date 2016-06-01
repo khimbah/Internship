@@ -4,10 +4,16 @@
 #
 
 #suggestions: 
+*Wheezy Raspbian
 *rasberry pi*
-*
+#*Servo motors
 *Adjustable PIR Motion Sensor (Product Code: RB-Ite-116 /HC-SR501) - R107.07 @www.hobbytronics.co.za
 #DFRobot IR Remote Kit for Arduino
 *Basic 8x2 Character LCD - Black on Green 5V - R54.16 @www.hobbytronics.co.za
 *4 Pon 2.54mm To 2.0mm Female/Male Jumper - Wire - 100mm (5PCs Pack)
-*multimeter - R136,78 
+*multimeter - R136,78
+*5v/3.3v Bread Board Power Supply - R105,95
+*Image Processing
+*Open CV 
+*Python
+*Arduino 
