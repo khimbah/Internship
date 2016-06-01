@@ -1,0 +1,30 @@
+#
+#
+#
+for whom are we doing this project?
+what is our niche market and who is our target market:
+#Target market:
+*age group between 12 and 75
+*both male and female
+*mostly, urban erea inhabitants
+*suburban areas
+#Niche market:
+*gym fanatics
+*gym system that tracks the to and fro movements of the weight ball
+#ardiono rivals: 
+*BeagleBone
+*Teensy/Teensy++
+*Penguino
+*
+#rasberry Pi rivals:
+*Banana Pi
+*Raxda Rock
+*Intel Compute Stick
+*Hummingboard
+*BeagleBone Black
+*arduino
+source: http://www.networkworld.com/article/3069611/mobile-wireless/new-products-of-the-week-5-16-16.html
+#important:
+A jump wire, is a short electrical wire with a solid tip at each end (or sometimes without them, simply "tinned"), which is normally used to interconnect the components in a breadboard. PE: among others, they are used to transfer electrical signals from anywhere on the breadboard to the input/output pins of a microcontroller.[1]
+
+Jump wires are fitted by inserting their "end connectors" into the slots provided in the breadboard, that beneath its surface has a few sets of parallel plates that connect the slots in groups of rows or columns depending on the area. The "end connectors" are inserted into the breadboard, without soldering, in the particular slots that need to be connected in the specific prototype.
