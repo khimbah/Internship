@@ -61,6 +61,11 @@
 We need hardware components for input, memory, processing and output. 
 *Work Breakdown and Task Time Estimates:
 #  *Project Deliverables:
+1.Code #this is the instructions that will process input from users(external stimuli) and from memory.
+2.Gadget (hardware without code/software) #this is the functional unit of integrated hardware components.
+3.User Manual # this is a document with a set of instructions on how to use the product 
+4.
+
 
 #*Project Risk Management
   *Risk Management Plan:
