@@ -28,3 +28,31 @@ source: http://www.networkworld.com/article/3069611/mobile-wireless/new-products
 A jump wire, is a short electrical wire with a solid tip at each end (or sometimes without them, simply "tinned"), which is normally used to interconnect the components in a breadboard. PE: among others, they are used to transfer electrical signals from anywhere on the breadboard to the input/output pins of a microcontroller.[1]
 
 Jump wires are fitted by inserting their "end connectors" into the slots provided in the breadboard, that beneath its surface has a few sets of parallel plates that connect the slots in groups of rows or columns depending on the area. The "end connectors" are inserted into the breadboard, without soldering, in the particular slots that need to be connected in the specific prototype.
+
+Microcontroller:
+
+
+Definition - What does Microcontroller mean?
+
+A microcontroller is a computer present in a single integrated circuit which is dedicated to perform one task and execute one specific application.
+
+It contains memory, programmable input/output peripherals as well a processor. Microcontrollers are mostly designed for embedded applications and are heavily used in automatically controlled electronic devices such as cellphones, cameras, microwave ovens, washing machines, etc.
+Techopedia explains Microcontroller
+Features of a microcontroller:
+
+    Far more economical to control electronic devices and processes as the size and cost involved is comparatively less than other methods.
+    Operating at a low clock rate frequency, usually use four bit words and are designed for low power consumption.
+    Architecture varies greatly with respect to purpose from general to specific, and with respect to microprocessor, ROM, RAM or I/O functions.
+    Has a dedicated input device and often has a display for output.
+    Usually embedded in other equipment and are used to control features or actions of the equipment.
+    Program used by microcontroller is stored in ROM.
+    Used in situations where limited computing functions are needed
+ 
+source:https://www.techopedia.com/definition/3641/microcontroller 
+
+
+Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications consisting of various discrete chips.
+
+Microcontrollers are used in automatically controlled products and devices, such as automobile engine control systems, implantable medical devices, remote controls, office machines, appliances, power tools, toys and other embedded systems. By reducing the size and cost compared to a design that uses a separate microprocessor, memory, and input/output devices, microcontrollers make it economical to digitally control even more devices and processes. Mixed signal microcontrollers are common, integrating analog components needed to control non-digital electronic systems.
+
+Some microcontrollers may use four-bit words and operate at clock rate frequencies as low as 4 kHz, for low power consumption (single-digit milliwatts or microwatts). They will generally have the ability to retain functionality while waiting for an event such as a button press or other interrupt; power consumption while sleeping (CPU clock and most peripherals off) may be just nanowatts, making many of them well suited for long lasting battery applications. Other microcontrollers may serve performance-critical roles, where they may need to act more like a digital signal processor (DSP), with higher clock speeds and power consumption.
