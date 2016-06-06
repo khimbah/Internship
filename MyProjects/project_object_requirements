@@ -1,16 +1,14 @@
 B) Hardware requirements
 · Raspberry Pi
-·* Servo motors #we might not need this one
+· Servo motors
 · Webcam
 · Arduino board
-· Acrylic sheet DMI cable #is used to transmit high-definition multimedia video signal wire
-Can high quality HDMI cable to transmit uncompressed high-definition video and multi-channel audio data, the data transmission speed for 5 GBPS.
-Without before signals or/d/a conversion, can guarantee delivery of the highest quality video signal. 
+· Acrylic sheet DMI cable
 · Monitor
 C) Software requirements
 · Ubuntu 12.04
 · Python
 · Open CV
-· *Geany? #we might not need this one
-· *Xming  #we might not need this one
-· *Putty  #we might not need this one 
+· Geany
+· Xming
+· Putty
