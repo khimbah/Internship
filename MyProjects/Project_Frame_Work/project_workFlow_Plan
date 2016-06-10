@@ -1,0 +1,25 @@
+//This document is a work flow for object detection system project
+
+Work Flow:
+
+#Input:
+1.camera or sensor
+code: what must the happen if the sensor detects the ball
+2.button(on/off)
+code: what must happen when the button(on/off) is pressed
+
+#Output:
+1.diplay:
+ a.how to connect the screen to the arduino?
+ b.programming the arduino to display on the screen
+ c. what do we want to display?
+ .we will display 'hello' when 'on' button is pressed, 'bye' when 'off' button is pressed.
+ .we will display 'count' after the ball passes the sensor and as the ball is being thrown, and 'sum' when pressing 'score' button 
+ .and 'reset'and clear the screen when reset button is pressed.
+2.sound(beep every time the ball passes by the sensor):
+ a. code to make our arduino make some noise(beep, that is, 'if' the sensor can detect the ball)
+ b. every time there is a beep, 'count' must be incremented by 1
+ c. eventually, 'count' will be stored in 'sum'
+#Process:
+
+
