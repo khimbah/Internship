@@ -1,12 +1,12 @@
 //This document is a work flow for object detection system project
-
+#So what we need to do is create a circuit that will carry all the components we will use.
 Work Flow:
 
 #Input:
 1.camera or sensor
-code: what must the happen if the sensor detects the ball
+code: what must happen if the sensor detects the ball
 2.button(on/off)
-code: what must happen when the button(on/off) is pressed
+code: what must happen when the button(on/off) is click
 
 #Output:
 1.diplay:
@@ -21,5 +21,26 @@ code: what must happen when the button(on/off) is pressed
  b. every time there is a beep, 'count' must be incremented by 1
  c. eventually, 'count' will be stored in 'sum'
 #Process:
+Part One: Input //buttons
+connecting the buttons to the arduino
+writing code to regulate the actions of the buttons
+test circuit and code
+make amendments and correcions
+make another test
+
+Part Two: Input //sensor
+connecting sensor to the arduino
+writing code to regulate the actions of the sensor
+test circuit and code
+make amendments and correcions
+make another test
+
+Part Three: Output //display
+connecting display screen to the arduino
+writing code to regulate the actions of the screen
+test circuit and code
+make amendments and correcions
+make another test
+
 
 
