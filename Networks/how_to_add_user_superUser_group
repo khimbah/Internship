@@ -1,1 +1,3 @@
+To add a user as a super user to a server using ubuntu terminal:
+type
 sudo usermod -a -G sudo <username>
