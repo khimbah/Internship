@@ -55,4 +55,31 @@ Microcontrollers are designed for embedded applications, in contrast to the micr
 
 Microcontrollers are used in automatically controlled products and devices, such as automobile engine control systems, implantable medical devices, remote controls, office machines, appliances, power tools, toys and other embedded systems. By reducing the size and cost compared to a design that uses a separate microprocessor, memory, and input/output devices, microcontrollers make it economical to digitally control even more devices and processes. Mixed signal microcontrollers are common, integrating analog components needed to control non-digital electronic systems.
 
-Some microcontrollers may use four-bit words and operate at clock rate frequencies as low as 4 kHz, for low power consumption (single-digit milliwatts or microwatts). They will generally have the ability to retain functionality while waiting for an event such as a button press or other interrupt; power consumption while sleeping (CPU clock and most peripherals off) may be just nanowatts, making many of them well suited for long lasting battery applications. Other microcontrollers may serve performance-critical roles, where they may need to act more like a digital signal processor (DSP), with higher clock speeds and power consumption.
+Some microcontrollers may use four-bit words and operate at clock rate frequencies as low as 4 kHz, for low power consumption (single-digit milliwatts or microwatts). They will generally have the ability to retain functionality while waiting for an event such as a button press or other interrupt; power consumption while sleeping (CPU clock and most peripherals off) may be just nanowatts, making many of them well suited for long lasting battery applications. Other microcontrollers may serve performance-critical roles, where they may need to act more like a digital signal processor (DSP), with higher clock speeds and power consumption. 
+
+#The on/off button code flow://this should form part of project_workFlow_Plan file in ~/Work/Internship/MyProjects/Project_Frame_Work folder.
+/*if the on/off button is clicked, the first click will be 'on'
+the second click will be off, the third one will be on again in turns
+*how can we achieve this?
+by modifying this code:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter an integer: ";
+    cin >> n;
+    if ( n%2 == 0) {
+        cout << n << " is even.";
+    }
+    else {
+        cout << n << " is odd.";
+
+    }
+    return 0;
+}
+
+on clicking the button:
+on=high=even number(integer)
+on++=low=odd numbeer(integer)
+*/
