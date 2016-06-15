@@ -10,7 +10,8 @@ Serial.begin(9600);
 }
 
 void loop()
-{
+{ 
+  int total = 0;
   long signal_duration, inches, cm;
   pinMode(signal_in, OUTPUT);
 digitalWrite(signal_in, LOW);
@@ -25,8 +26,8 @@ signal_duration = pulseIn(signal_in, HIGH);
 //
 inches = microsecondsToInches(signal_duration);
   cm = microsecondsToCentimeters(signal_duration);
-  
-if( inches == 197 ){
+if( inches == 197 )
+{
   Serial.print(inches);
   Serial.print("in, ");
   Serial.print(cm);
@@ -36,10 +37,11 @@ if( inches == 197 ){
 
 } else if( inches < 197 )
  {
-   int count = 1;
-  if(count >= sum ){  
-  count++;   
-  sum = count+1;  
+   
+  for(int count = 1;count >= sum;count++)
+  {  
+     
+  total = sum_of_throws(sum); 
   Serial.print(inches);
   Serial.print("in, ");
   Serial.print(cm);
@@ -65,4 +67,8 @@ long microsecondsToCentimeters(long microseconds)
 {
   return microseconds / 29 / 2;
 }
-
+int sum_of_throws(int count)
+{
+sum = count + 1;
+return sum;
+}
