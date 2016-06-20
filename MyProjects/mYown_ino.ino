@@ -1,60 +1,76 @@
 //counting how many times an object passes by the Object_Detection_System
-int led_pin = 5;
-const int signal_in = 8;
+//include the library code
+#include <LiquidCrystal.h>
+const int signal_in = 7;
 int sum = 0;
+int count = 1;
+int button_on = 6;
+int button_off = 5;
+//initialize the library with the number of the interface pins
+LiquidCrystal lcd(8,9,10,11,12,13);
 void setup()
-{
-//pinMode(led_pin, OUTPUT);
+{ 
+  pinMode(button_on, INPUT);
+  pinMode(button_off, INPUT);
 
-Serial.begin(9600);
+  // set up the LCD's number of columns and rows:
+  lcd.begin(20, 4);
+  // Print a message to the LCD.
+  lcd.print("hello every one,\nfeel free,\n play!");
+  Serial.begin(9600);
 }
 
 void loop()
 { 
-  int total = 0;
-  long signal_duration, inches, cm;
-  pinMode(signal_in, OUTPUT);
-digitalWrite(signal_in, LOW);
-delayMicroseconds(2);
-digitalWrite(signal_in, HIGH);
-delayMicroseconds(5);
-digitalWrite(signal_in, LOW);
+  if(button_on = HIGH){
+    // set the cursor to column 0, line 1
+    // line 1 is the second row, because counting begins with 0 
+    lcd.setCursor(0, 1);
+    // print the number of seconds since reset:
+    lcd.print(millis()/1000); 
 
-//
-pinMode(signal_in, INPUT);
-signal_duration = pulseIn(signal_in, HIGH);
-//
-inches = microsecondsToInches(signal_duration);
-  cm = microsecondsToCentimeters(signal_duration);
-if( inches == 197 )
-{
-  Serial.print(inches);
-  Serial.print("in, ");
-  Serial.print(cm);
-  Serial.print("cm");
-  Serial.println();
-  delay(100);
+    long signal_duration, inches,total;
+    pinMode(signal_in, OUTPUT);
+    digitalWrite(signal_in, LOW);
+    delayMicroseconds(2);
+    digitalWrite(signal_in, HIGH);
+    delayMicroseconds(5);
+    digitalWrite(signal_in, LOW);
 
-} else if( inches < 197 )
- {
-   
-  for(int count = 1;count >= sum;count++)
-  {  
-     
-  total = sum_of_throws(sum); 
-  Serial.print(inches);
-  Serial.print("in, ");
-  Serial.print(cm);
-  Serial.print("cm, ");
-  Serial.print(count);
-  Serial.print(" counts ");
-  Serial.print(" and sum is ");
-  Serial.print(sum);
-  Serial.println();
-  digitalWrite(led_pin, LOW);
-  delay(100);
+    //
+    pinMode(signal_in, INPUT);
+    signal_duration = pulseIn(signal_in, HIGH);
+    //
+    inches = microsecondsToInches(signal_duration);
+    total = sum_of_throws(sum);
+
+    if( inches > 0 && inches < 197 )
+    {
+      if(count >= sum)
+      {   
+        Serial.print(inches);
+        Serial.print("in, ");
+        Serial.print(count);
+        Serial.print(" counts ");
+        Serial.print(" and sum is ");
+        Serial.print(total);
+        Serial.println();
+        delay(1000);
+      } 
+
+    } 
+    else if( inches == 197 )
+    {
+      Serial.print(inches);
+      Serial.print("in, ");
+      Serial.println();
+      delay(1000);
+    }
+  } 
+  else if (button_off = LOW)
+  {
+    Serial.end();
   }
- }
 }
 
 
@@ -63,12 +79,10 @@ long microsecondsToInches(long microseconds)
   return microseconds / 74 / 2;
 }
 
-long microsecondsToCentimeters(long microseconds)
-{
-  return microseconds / 29 / 2;
+int sum_of_throws(int sum)
+{ 
+  sum = sum +count;
+  count++;
+  return sum;
 }
-int sum_of_throws(int count)
-{
-sum = count + 1;
-return sum;
-}
+
