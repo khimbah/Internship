@@ -1,0 +1,273 @@
+#
+#
+#
+for whom are we doing this project?
+what is our niche market and who is our target market:
+#Target market:
+*age group between 12 and 75
+*both male and female
+*mostly, urban erea inhabitants
+*suburban areas
+#Niche market:
+*gym fanatics
+*gym system that tracks the to and fro movements of the weight ball
+#ardiono rivals: 
+*BeagleBone
+*Teensy/Teensy++
+*Penguino
+*
+#rasberry Pi rivals:
+*Banana Pi
+*Raxda Rock
+*Intel Compute Stick
+*Hummingboard
+*BeagleBone Black
+*arduino
+source: http://www.networkworld.com/article/3069611/mobile-wireless/new-products-of-the-week-5-16-16.html
+#important:
+A jump wire, is a short electrical wire with a solid tip at each end (or sometimes without them, simply "tinned"), which is normally used to interconnect the components in a breadboard. PE: among others, they are used to transfer electrical signals from anywhere on the breadboard to the input/output pins of a microcontroller.[1]
+
+Jump wires are fitted by inserting their "end connectors" into the slots provided in the breadboard, that beneath its surface has a few sets of parallel plates that connect the slots in groups of rows or columns depending on the area. The "end connectors" are inserted into the breadboard, without soldering, in the particular slots that need to be connected in the specific prototype.
+
+#Microcontroller:
+
+
+Definition - What does Microcontroller mean?
+
+A microcontroller is a computer present in a single integrated circuit which is dedicated to perform one task and execute one specific application.
+
+It contains memory, programmable input/output peripherals as well a processor. Microcontrollers are mostly designed for embedded applications and are heavily used in automatically controlled electronic devices such as cellphones, cameras, microwave ovens, washing machines, etc.
+Techopedia explains Microcontroller
+Features of a microcontroller:
+
+    Far more economical to control electronic devices and processes as the size and cost involved is comparatively less than other methods.
+    Operating at a low clock rate frequency, usually use four bit words and are designed for low power consumption.
+    Architecture varies greatly with respect to purpose from general to specific, and with respect to microprocessor, ROM, RAM or I/O functions.
+    Has a dedicated input device and often has a display for output.
+    Usually embedded in other equipment and are used to control features or actions of the equipment.
+    Program used by microcontroller is stored in ROM.
+    Used in situations where limited computing functions are needed
+ 
+source:https://www.techopedia.com/definition/3641/microcontroller 
+
+
+Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications consisting of various discrete chips.
+
+Microcontrollers are used in automatically controlled products and devices, such as automobile engine control systems, implantable medical devices, remote controls, office machines, appliances, power tools, toys and other embedded systems. By reducing the size and cost compared to a design that uses a separate microprocessor, memory, and input/output devices, microcontrollers make it economical to digitally control even more devices and processes. Mixed signal microcontrollers are common, integrating analog components needed to control non-digital electronic systems.
+
+Some microcontrollers may use four-bit words and operate at clock rate frequencies as low as 4 kHz, for low power consumption (single-digit milliwatts or microwatts). They will generally have the ability to retain functionality while waiting for an event such as a button press or other interrupt; power consumption while sleeping (CPU clock and most peripherals off) may be just nanowatts, making many of them well suited for long lasting battery applications. Other microcontrollers may serve performance-critical roles, where they may need to act more like a digital signal processor (DSP), with higher clock speeds and power consumption. 
+
+#The on/off button code flow://this should form part of project_workFlow_Plan file in ~/Work/Internship/MyProjects/Project_Frame_Work folder.
+/*if the on/off button is clicked, the first click will be 'on'
+the second click will be off, the third one will be on again in turns
+*how can we achieve this?
+by modifying this code:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter an integer: ";
+    cin >> n;
+    if ( n%2 == 0) {
+        cout << n << " is even.";
+    }
+    else {
+        cout << n << " is odd.";
+
+    }
+    return 0;
+}
+
+on clicking the button:
+on=high=even number(integer)
+on++=low=odd numbeer(integer)
+*/
+
+#Ultra Sonic Range Finder
+pulseIn() function example:
+#Reads a pulse (either HIGH or LOW) on a pin
+
+int pin = 7;
+
+unsigned long duration;
+
+
+
+void setup()
+
+{
+
+  pinMode(pin, INPUT);
+
+}
+
+
+
+void loop()
+
+{
+
+  duration = pulseIn(pin, HIGH);
+
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+/* Ping))) Sensor
+
+   This sketch reads a PING))) ultrasonic rangefinder and returns the
+   distance to the closest object in range. To do this, it sends a pulse
+   to the sensor to initiate a reading, then listens for a pulse
+   to return.  The length of the returning pulse is proportional to
+   the distance of the object from the sensor.
+
+   The circuit:
+	* +V connection of the PING))) attached to +5V
+	* GND connection of the PING))) attached to ground
+	* SIG connection of the PING))) attached to digital pin 7
+
+   http://www.arduino.cc/en/Tutorial/Ping
+
+   created 3 Nov 2008
+   by David A. Mellis
+   modified 30 Aug 2011
+   by Tom Igoe
+
+   This example code is in the public domain.
+
+ */
+
+//this constant won't change.  It's the pin number
+// of the sensor's output:
+const int pingPin = 7;
+
+void setup() {
+  // initialize serial communication:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // establish variables for duration of the ping,
+  // and the distance result in inches and centimeters:
+  long duration, inches, cm;
+
+  // The PING))) is triggered by a HIGH pulse of 2 or more microseconds.
+  // Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
+  pinMode(pingPin, OUTPUT);
+  digitalWrite(pingPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(pingPin, HIGH);
+  delayMicroseconds(5);
+  digitalWrite(pingPin, LOW);
+
+  // The same pin is used to read the signal from the PING))): a HIGH
+  // pulse whose duration is the time (in microseconds) from the sending
+  // of the ping to the reception of its echo off of an object.
+  pinMode(pingPin, INPUT);
+  duration = pulseIn(pingPin, HIGH);
+
+  // convert the time into a distance
+  inches = microsecondsToInches(duration);
+  cm = microsecondsToCentimeters(duration);
+
+  Serial.print(inches);
+  Serial.print("in, ");
+  Serial.print(cm);
+  Serial.print("cm");
+  Serial.println();
+
+  delay(100);
+}
+
+long microsecondsToInches(long microseconds) {
+  // According to Parallax's datasheet for the PING))), there are
+  // 73.746 microseconds per inch (i.e. sound travels at 1130 feet per
+  // second).  This gives the distance travelled by the ping, outbound
+  // and return, so we divide by 2 to get the distance of the obstacle.
+  // See: http://www.parallax.com/dl/docs/prod/acc/28015-PING-v1.3.pdf
+  return microseconds / 74 / 2;
+}
+
+long microsecondsToCentimeters(long microseconds) {
+  // The speed of sound is 340 m/s or 29 microseconds per centimeter.
+  // The ping travels out and back, so to find the distance of the
+  // object we take half of the distance travelled.
+  return microseconds / 29 / 2;
+}
+
+-------------------------------------
+Speed of sound = 1130 feet per second.  approximately 13,560 inches per second or one inch in 73.746 microseconds
+How do we divide our pulse measurement value by the floating-point number 73.746?:
+
+
+//
+A short ultrasonic pulse is transmitted at the time 0, reflected by an object.
+ *The senor receives this signal and converts it to an electric signal.
+ *The next pulse can be transmitted when the echo is faded away.
+ *This time period is called cycle period.
+ *The recommended period should be no less than 50ms.
+ *If a 10μs width trigger pulse is sent to the signal pin, the Ultrasonic module will output eight 40kHz ultrasonic signal and detect the echo back.
+* The measured distance is proportional to the echo pulse width and can be calculated by the formula above.
+*If no obstacle is detected, the output pin will give a 38ms high level signal.
+
+#calling a function in arduino as you recieve signal.
+Serial.onReceive(MyFunction)
+
+Description
+
+Used during setup() to specify a user written function to be called whenever a serial 'packet' is received (defined as a string of bytes followed by a 10 ms pause) or whenever the serial receive buffer overflows.
+
+Syntax
+
+This function requires the separate definition of the function to be called. The function definition should be of the following format:
+
+void MyFunction(){
+   //user code goes here
+}
+
+As this function is called during an Interrupt, certain operations, such as delay() which are dependent on interrupts will not work. If any of these functions are needed, it is possible to re-enable other interrupts using the command sei() at the beginning of MyFunction. However, extreme care should be taken in this case as concurrency issues can arise from MyFunction being called by an interrupt during the operation of another instance of MyFunction. The syntax for this case is shown below:
+
+void MyFunction(){
+   sei();
+   //user code goes here
+}
+
+Parameters
+
+MyFunction, the name of the user written function to be called. (No parenthesis are needed after MyFunction, as we are not actually calling it when we call attachReceiveFunction)
+
+Returns
+
+nothing
+
+Example
+
+void MyFunction(){
+   int i;
+   int length = Serial.available();
+   int string_buffer[32];   
+
+   //copy data out of the receive buffer
+   for(i = 0; i < length; i++){
+      string_buffer[i] = Serial.read();
+   }
+
+   //run a string compare function, or otherwise parse the received data
+   if(MySpecialStingCompare(string_buffer,"Hello Arduino")){
+      Serial.println("Hello World");
+   }
+}
+
+void setup(){
+   Serial.begin(19200);
+   Serial.onReceive(MyFunction);
+}
+
+void loop(){
+   //do nothing
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------//psuedo code for counting the number of times a ball passed a sensor
+
+
