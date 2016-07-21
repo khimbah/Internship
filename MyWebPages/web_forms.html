@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>my_first_webform_in_vim</title>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
 <script  type="text/javascript">
 $(document).ready(function(){
-  console.log("THIS raN");
- $("#form_id").submit(function(event){
-console.log("test");
-    event.preventDefault();
- });
+$("#demo").prop('disabled', true)
+function submit_form_only(){
+    document.getElementById("#form_id").submit();
+    alert("Submitted");
+    }
 });
 </script>
+
 </head>
 
 <body>
@@ -19,12 +22,14 @@ Kindly feel in your details:
 <br/>
 
 <p id="demo">Don't forget to submit:<input type="text" name="" value=""></input><p/><br/>
+
+
 <form id="form_id">
-<table><tr><th></th></tr>
+<table><tr><th>Order Form</th></tr>
 <tr>
-Name:<input type="text" name="" value=""></input>
+<tr><th>Name:<input type="text" name="" value=""></input></th>
 </tr><br/>
-<tr>Surname:<input type="text" name="" value=""><br/>
+<tr><th>Surname:<input type="text" name="" value=""></input></th><br/>
 </tr>
 </table>
 <input type="submit"  value="submit" id="submit_id"></input>
