@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>serialize demo</title>
+  <style>
+  body, select {
+    font-size: 12px;
+  }
+  form {
+    margin: 5px;
+  }
+  p {
+    color: red;
+    margin: 5px;
+    font-size: 14px;
+  }
+  b {
+    color: blue;
+  }
+  </style>
+  <script src="a_data/jquery-1.js"></script>
+<style>html, body { border:0; margin:0; padding:0; }body { font-family: 'Helvetica', 'Arial',  'Verdana', 'sans-serif'; }</style></head>
+<body>
+ 
+<form>
+  <select name="single">
+    <option selected="selected">Single</option>
+    <option>Single2</option>
+  </select>
+ 
+  <br>
+  <select name="multiple" multiple="multiple">
+    <option selected="selected">Multiple</option>
+    <option>Multiple2</option>
+    <option selected="selected">Multiple3</option>
+  </select>
+ 
+  <br>
+  <input name="check" value="check1" id="ch1" type="checkbox">
+  <label for="ch1">check1</label>
+  <input name="check" value="check2" checked="checked" id="ch2" type="checkbox">
+  <label for="ch2">check2</label>
+ 
+  <br>
+  <input name="radio" value="radio1" checked="checked" id="r1" type="radio">
+  <label for="r1">radio1</label>
+  <input name="radio" value="radio2" id="r2" type="radio">
+  <label for="r2">radio2</label>
+</form>
+ 
+<p><tt id="results">single=Single&amp;multiple=Multiple&amp;multiple=Multiple3&amp;check=check2&amp;radio=radio1</tt></p>
+ 
+<script>window.onload = function() {
+  function showValues() {
+    var str = $( "form" ).serialize();
+    $( "#results" ).text( str );
+  }
+  $( "input[type='checkbox'], input[type='radio']" ).on( "click", showValues );
+  $( "select" ).on( "change", showValues );
+  showValues();
+};</script>
+ 
+
+</body></html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class=" js no-touch csstransforms3d csstransitions" style="" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>jQuery Basics</title>
+<meta name="description" content="jQuery Basics - Learning JavaScript Framework in simple and easy steps. A beginner's tutorial containing complete knowledge of jQuery Selectors, Attributes, CSS, DOM Manipulation, AJAX Support, Drag and Drop, Effects, Event Handling, UI, Plug-ins and other related Utilities.">
+<meta name="Keywords" content="jQuery, JavaScript, Tutorials, Learning, Beginners, Basics, Scripting Language, Functions, Objects, DOM, AJAX, Drag, Drop, Effects, Events, Selectors.">
+<!-- base href="http://www.tutorialspoint.com/" -->
+<link rel="shortcut icon" href="http://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="471319149685276">
+<meta property="og:site_name" content="www.tutorialspoint.com">
+<meta name="robots" content="index, follow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script src="jQuery%20Basics_files/ca-pub-7133395778201029.js"></script><script type="text/javascript" src="jQuery%20Basics_files/script-min-v4.js"></script>
+<link rel="stylesheet" href="jQuery%20Basics_files/style-min.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/jquery/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #1ea2c9 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #1ea2c9 !important;}
+.submenu-item{ border-bottom: 2px solid #1ea2c9 !important; border-top: 2px solid #1ea2c9 !important }
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="jQuery%20Basics_files/loading-cg.gif" alt="" height="70" width="70">
+   </div>
+</div>
+<header>
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="http://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="jQuery%20Basics_files/logo.png">
+      </a>
+      </h1>
+<!-- We are hiring  STARTS -->
+<div style="position:relative;top:-20px; left:400px;">
+<ul style="list-style-type: none">
+<li> <a href="http://www.tutorialspoint.com/about/about_careers.htm" style="background: #f7e75d; padding:5px;"><i class="icon icon-suitcase"></i> We are hiring</a> </li>   
+</ul>
+</div>
+<!-- We are hiring  END -->
+      <button style="top: 2270px!important" class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button>
+      <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu" style="top:-28px;">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="http://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library  <i class="fa-caret-down"></i></span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.send18.com/" target="_blank"><i class="fa-paper-plane-o"> </i> Send18</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/online_dev_tools.htm"><span class="dev-tools-menu">  Tools</span></a></li> 
+            </ul>
+         </nav>
+         <div class="searchform-popup" style="top:0px;">
+            <input class="header-search-box" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off" type="text">
+            <div class="magnifying-glass"><i class="icon-search"></i> Search </div>
+        </div>
+      </div>
+     </div>	
+</div></header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="jQuery%20Basics_files/jquery-mini-logo.jpg" alt="jQuery Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">jQuery Tutorial</li>
+<li><a href="http://www.tutorialspoint.com/jquery/index.htm">jQuery - Home</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-overview.htm">jQuery - Overview</a></li>
+<li><a style="background-color: rgb(214, 214, 214);" href="http://www.tutorialspoint.com/jquery/jquery-basics.htm">jQuery - Basics</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-selectors.htm">jQuery - Selectors</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-attributes.htm">jQuery - Attributes</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-traversing.htm">jQuery - Traversing</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-css.htm">jQuery - CSS</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-dom.htm">jQuery - DOM</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-events.htm">jQuery - Events</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-ajax.htm">jQuery - AJAX</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-effects.htm">jQuery - Effects</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">jQuery UI</li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-interactions.htm">jQuery - Interactions</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-widgets.htm">jQuery - Widgets</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-theming.htm">jQuery - Theming</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">jQuery References</li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-utilities.htm">jQuery - Utilities</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">jQuery Plugins</li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-plugins.htm">jQuery - Plugins</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-pagepiling.htm">jQuery - PagePiling.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-flickerplate.htm">jQuery - Flickerplate.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-multiscroll.htm">jQuery - Multiscroll.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-slidebar.htm">jQuery - Slidebar.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-rowgrid.htm">jQuery - Rowgrid.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-alertify.htm">jQuery - Alertify.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-progressbar.htm">jQuery - Progressbar.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-slideshow.htm">jQuery - Slideshow.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-drawsvg.htm">jQuery - Drawsvg.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-tagsort.htm">jQuery - Tagsort.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-logosdistort.htm">jQuery - LogosDistort.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-filer.htm">jQuery - Filer.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-whatsnearby.htm">jQuery - Whatsnearby.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-checkout.htm">jQuery - Checkout.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-blockrain.htm">jQuery - Blockrain.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-producttour.htm">jQuery - Producttour.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-megadropdown.htm">jQuery - Megadropdown.js</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-weather.htm">jQuery - Weather.js</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">jQuery Useful Resources</li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery_questions_answers.htm">jQuery - Questions and Answers</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-quick-guide.htm">jQuery - Quick Guide</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-resources.htm">jQuery - Useful Resources</a></li>
+<li><a href="http://www.tutorialspoint.com/jquery/jquery-discussion.htm">jQuery - Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>jQuery - Basics</h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="jQuery%20Basics_files/show_ads.js"> 
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="60" width="468"></iframe></ins></ins>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/jquery/jquery-overview.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/jquery/jquery-selectors.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<p>jQuery is a framework built using JavaScript capabilities. So while 
+developing your applications using jQuery, you can use all the functions
+ and other capabilities available in JavaScript.</p>
+<p>This chapter would explain most basic concepts but frequently used in jQuery based applications.</p>
+<h2>String</h2>
+<p>A string in JavaScript is an immutable object that contains none, one or many characters.</p>
+<p>Following are the valid examples of a JavaScript String −</p>
+<pre class="result notranslate">"This is JavaScript String"
+'This is JavaScript String'
+'This is "really" a JavaScript String'
+"This is 'really' a JavaScript String"
+</pre>
+<h2>Numbers</h2>
+<p>Numbers in JavaScript are double-precision 64-bit format IEEE 754 values. They are immutable, just as strings.</p>
+<p>Following are the valid examples of a JavaScript Numbers −</p>
+<pre class="result notranslate">5350
+120.27
+0.26
+</pre>
+<h2>Boolean</h2>
+<p>A boolean in JavaScript can be either <b>true</b> or <b>false</b>. If a number is zero, it defaults to false. If an empty string defaults to false −</p>
+<p>Following are the valid examples of a JavaScript Boolean −</p>
+<pre class="result notranslate">true      // true
+false     // false
+0         // false
+1         // true
+""        // false
+"hello"   // true
+</pre>
+<h2>Objects</h2>
+<p>JavaScript supports Object concept very well. You can create an object using the object literal as follows −</p>
+<pre class="result notranslate">var emp = {
+   name: "Zara",
+   age: 10
+};
+</pre>
+<p>You can write and read properties of an object using the dot notation as follows −</p>
+<pre class="result notranslate">// Getting object properties
+emp.name  // ==&gt; Zara
+emp.age   // ==&gt; 10
+
+// Setting object properties
+emp.name = "Daisy"  // &lt;== Daisy
+emp.age  =  20      // &lt;== 20
+</pre>
+<h2>Arrays</h2>
+<p>You can define arrays using the array literal as follows −</p>
+<pre class="result notranslate">var x = [];
+var y = [1, 2, 3, 4, 5];
+</pre>
+<p>An array has a <b>length</b> property that is useful for iteration −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="kwd">var</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">];</span><span class="pln">
+
+</span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> x</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">// Do something with x[i]</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Functions</h2>
+<p>A function in JavaScript can be either named or anonymous. A named function can be defined using <i>function</i> keyword as follows −</p> 
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="kwd">function</span><span class="pln"> named</span><span class="pun">(){</span><span class="pln">
+   </span><span class="com">// do some stuff here</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>An anonymous function can be defined in similar way as a normal function but it would not have any name.</p>
+<p>A anonymous function can be assigned to a variable or passed to a method as shown below.</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="kwd">var</span><span class="pln"> handler </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(){</span><span class="pln">
+   </span><span class="com">// do some stuff here</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>JQuery makes a use of anonymous functions very frequently as follows −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+   </span><span class="com">// do some stuff here</span><span class="pln">
+</span><span class="pun">});</span></pre>
+<h2>Arguments</h2>
+<p>JavaScript variable <i>arguments</i> is a kind of array which has <i>length</i> property. Following example explains it very well −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="kwd">function</span><span class="pln"> func</span><span class="pun">(</span><span class="pln">x</span><span class="pun">){</span><span class="pln">
+   console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pln"> x</span><span class="pun">,</span><span class="pln"> arguments</span><span class="pun">.</span><span class="pln">length</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+func</span><span class="pun">();</span><span class="pln">                </span><span class="com">//==&gt; "undefined", 0</span><span class="pln">
+func</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln">               </span><span class="com">//==&gt; "number", 1</span><span class="pln">
+func</span><span class="pun">(</span><span class="str">"1"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"3"</span><span class="pun">);</span><span class="pln">   </span><span class="com">//==&gt; "string", 3</span></pre>
+<p>The arguments object also has a <i>callee</i> property, which refers to the function you're inside of. For example −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="kwd">function</span><span class="pln"> func</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> arguments</span><span class="pun">.</span><span class="pln">callee</span><span class="pun">;</span><span class="pln"> 
+</span><span class="pun">}</span><span class="pln">
+
+func</span><span class="pun">();</span><span class="pln">                </span><span class="com">// ==&gt; func</span></pre>
+<h2>Context</h2>
+<p>JavaScript famous keyword <b>this</b> always refers to the current context.  Within a function <b>this</b> context can change, depending on how the function is called −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">// this refers to window.document</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+
+$</span><span class="pun">(</span><span class="str">"div"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">// this refers to a div DOM element</span><span class="pln">
+</span><span class="pun">});</span></pre>
+<p>You can specify the context for a function call using the function-built-in methods <b>call()</b> and <b>apply()</b> methods.</p>
+<p>The difference between them is how they pass arguments. Call passes 
+all arguments through as arguments to the function, while apply accepts 
+an array as the arguments.</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="kwd">function</span><span class="pln"> scope</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln"> arguments</span><span class="pun">.</span><span class="pln">length</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+scope</span><span class="pun">()</span><span class="pln"> </span><span class="com">// window, 0</span><span class="pln">
+scope</span><span class="pun">.</span><span class="pln">call</span><span class="pun">(</span><span class="str">"foobar"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">2</span><span class="pun">]);</span><span class="pln">  </span><span class="com">//==&gt; "foobar", 1</span><span class="pln">
+scope</span><span class="pun">.</span><span class="pln">apply</span><span class="pun">(</span><span class="str">"foobar"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">2</span><span class="pun">]);</span><span class="pln"> </span><span class="com">//==&gt; "foobar", 2</span></pre>
+<h2>Scope</h2>
+<p>The scope of a variable is the region of your program in which it is defined. JavaScript variable will have only two scopes.</p>
+<ul class="list">
+<li><p><b>Global Variables</b> − A global variable has global scope which means it is defined everywhere in your JavaScript code.</p></li>
+<li><p><b>Local Variables</b> − A local variable will be visible only 
+within a function  where it is defined. Function parameters are always 
+local to that function.</p></li>
+</ul>
+<p>Within the body of a function, a local variable takes precedence over a global variable with the same name −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="kwd">var</span><span class="pln"> myVar </span><span class="pun">=</span><span class="pln"> </span><span class="str">"global"</span><span class="pun">;</span><span class="pln">     </span><span class="com">// ==&gt; Declare a global variable</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">var</span><span class="pln"> myVar </span><span class="pun">=</span><span class="pln"> </span><span class="str">"local"</span><span class="pun">;</span><span class="pln">   </span><span class="com">// ==&gt; Declare a local variable</span><span class="pln">
+   document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">myVar</span><span class="pun">);</span><span class="pln"> </span><span class="com">// ==&gt; local</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Callback</h2>
+<p>A callback is a plain JavaScript function passed to some method as an
+ argument or option. Some callbacks are just events, called to give the 
+user a chance to react when a certain state is triggered.</p>
+<p>jQuery's event system uses such callbacks everywhere for example −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">"body"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"clicked: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">target</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></pre>
+<p>Most callbacks provide arguments and a context. In the event-handler 
+example, the callback is called with one argument, an Event.</p>
+<p>Some callbacks are required to return something, others make that 
+return value optional. To prevent a form submission, a submit event 
+handler can return false as follows −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="str">"#myform"</span><span class="pun">).</span><span class="pln">submit</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">});</span></pre>
+<h2>Closures</h2>
+<p>Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner scope.</p>
+<p>Following example shows how the variable <b>counter</b> is visible within the create, increment, and print functions, but not outside of them −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="kwd">function</span><span class="pln"> create</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">var</span><span class="pln"> counter </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+	
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      increment</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         counter</span><span class="pun">++;</span><span class="pln">
+      </span><span class="pun">},</span><span class="pln">
+		
+      </span><span class="kwd">print</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">counter</span><span class="pun">);</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">var</span><span class="pln"> c </span><span class="pun">=</span><span class="pln"> create</span><span class="pun">();</span><span class="pln">
+c</span><span class="pun">.</span><span class="pln">increment</span><span class="pun">();</span><span class="pln">
+c</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">();</span><span class="pln">     </span><span class="com">// ==&gt; 1</span></pre>
+<p>This pattern allows you to create objects with methods that operate 
+on data that isn't visible to the outside world. It should be noted that
+ <b>data hiding</b> is the very basis of object-oriented programming.</p> 
+<h2>Proxy Pattern</h2>
+<p>A proxy is an object that can be used to control access to another 
+object. It implements the same interface as this other object and passes
+ on any method invocations to it. This other object is often called the 
+real subject.</p>
+<p>A proxy can be instantiated in place of this real subject and allow 
+it to be accessed remotely. We can saves jQuery's setArray method in a 
+closure and overwrites it as follows −</p>
+<pre style="" class="prettyprint notranslate prettyprinted"><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">// log all calls to setArray</span><span class="pln">
+   </span><span class="kwd">var</span><span class="pln"> proxied </span><span class="pun">=</span><span class="pln"> jQuery</span><span class="pun">.</span><span class="pln">fn</span><span class="pun">.</span><span class="pln">setArray</span><span class="pun">;</span><span class="pln">
+
+   jQuery</span><span class="pun">.</span><span class="pln">fn</span><span class="pun">.</span><span class="pln">setArray </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln"> arguments</span><span class="pun">);</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> proxied</span><span class="pun">.</span><span class="pln">apply</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln"> arguments</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">};</span><span class="pln">
+	
+</span><span class="pun">})();</span></pre>
+<p>The above wraps its code in a function to hide the <i>proxied</i> variable. The proxy then logs all calls to the method and delegates the call to the original method. Using <i>apply(this, arguments)</i> guarantees that the caller won't be able to notice the difference between the original and the proxied method.</p>
+<h2>Built-in Functions</h2>
+<p>JavaScript comes along with a useful set of built-in functions. These
+ methods can be used to manipulate Strings, Numbers and Dates.</p>
+<p>Following are important JavaScript functions −</p>
+<table class="table table-bordered">
+<tbody><tr>
+<th>S.N.</th>
+<th>Method &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>charAt()</b>
+<p>Returns the character at the specified index.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>concat()</b>
+<p>Combines the text of two strings and returns a new string.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>forEach()</b>
+<p>Calls a function for each element in the array.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>indexOf()</b>
+<p>Returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>length()</b>
+<p>Returns the length of the string.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td>
+<b>pop()</b>
+<p>Removes the last element from an array and returns that element.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td>
+<b>push()</b>
+<p>Adds one or more elements to the end of an array and returns the new length of the array.</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td>
+<b>reverse()</b>
+<p>Reverses the order of the elements of an array -- the first becomes the last, and the last becomes the first.</p></td>
+</tr>
+<tr>
+<td>9</td>
+<td>
+<b>sort()</b>
+<p>Sorts the elements of an array.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td>
+<b>substr()</b>
+<p>Returns the characters in a string beginning at the specified location through the specified number of characters.</p></td>
+</tr>
+<tr>
+<td>11</td>
+<td>
+<b>toLowerCase()</b>
+<p>Returns the calling string value converted to lower case.</p></td>
+</tr>
+<tr>
+<td>12</td>
+<td>
+<b>toString()</b>
+<p>Returns the string representation of the number's value.</p></td>
+</tr>
+<tr>
+<td>13</td>
+<td>
+<b>toUpperCase()</b>
+<p>Returns the calling string value converted to uppercase.</p></td>
+</tr>
+</tbody></table>
+<h2>The Document Object Model</h2>
+<p>The Document Object Model is a tree structure of various elements of HTML as follows −</p>
+<pre style="" class="prettyprint notranslate tryit prettyprinted"><span class="tag">&lt;html&gt;</span><span class="pln">
+
+   </span><span class="tag">&lt;head&gt;</span><span class="pln">
+      </span><span class="tag">&lt;title&gt;</span><span class="pln">The jQuery Example</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/head&gt;</span><span class="pln">
+	
+   </span><span class="tag">&lt;body&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">This is a paragraph.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">This is second paragraph.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">This is third paragraph.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/body&gt;</span><span class="pln">
+	
+</span><span class="tag">&lt;/html&gt;</span></pre>
+<p>This will produce following result −</p>
+<iframe onload="resizeFrame(this)" class="result" src="jQuery%20Basics_files/sample-html-code.html"></iframe>
+<p>Following are the important points about the above tree structure −</p>
+<ul class="list">
+<li><p>The &lt;html&gt; is the ancestor of all the other elements; in 
+other words, all the other elements are descendants of &lt;html&gt;.</p></li>
+<li><p>The &lt;head&gt; and &lt;body&gt; elements are not only descendants, but children of &lt;html&gt;, as well.</p></li>
+<li><p>Likewise, in addition to being the ancestor of &lt;head&gt; and &lt;body&gt;, &lt;html&gt; is also their parent.</p></li>
+<li><p>The &lt;p&gt; elements are children (and descendants) of 
+&lt;div&gt;, descendants of &lt;body&gt; and &lt;html&gt;, and siblings 
+of each other &lt;p&gt; elements.</p></li>
+</ul>
+<p>While learning jQuery concepts, it will be helpful to have 
+understanding on DOM, if you are not aware of DOM then I would suggest 
+to go through our simple tutorial on <a href="http://www.tutorialspoint.com/dom/index.htm" target="_blank">DOM Tutorial</a>.</p>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/jquery/jquery-overview.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="http://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/jquery/jquery-selectors.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="jQuery%20Basics_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:400px;margin:0;padding:0;position:relative;visibility:visible;width:580px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:400px;margin:0;padding:0;position:relative;visibility:visible;width:580px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" height="400" width="580"></iframe></ins></ins>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/jquery/jquery-basics.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="jQuery%20Basics_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/jquery/jquery-basics.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="jQuery%20Basics_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/jquery/jquery-basics.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="jQuery%20Basics_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/jquery/jquery-basics.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="jQuery%20Basics_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/jquery/jquery-basics.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="jQuery%20Basics_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/jquery/jquery-basics.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;">
+<img src="jQuery%20Basics_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="jQuery%20Basics_files/show_ads.js">
+</script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;" frameborder="0" height="250" width="300"></iframe></ins></ins>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="jQuery%20Basics_files/show_ads.js">
+</script><ins id="aswift_3_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_3_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;" frameborder="0" height="600" width="300"></iframe></ins></ins>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="jQuery%20Basics_files/show_ads.js">
+</script><ins id="aswift_4_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_4_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;" frameborder="0" height="250" width="300"></iframe></ins></ins>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="http://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="jQuery%20Basics_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="http://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2016. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}" type="text">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="jQuery%20Basics_files/custom-min.js"></script><a id="scrollToTop" href="#" class="scroll-to-top visible"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="jQuery%20Basics_files/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+<script type="text/javascript" src="jQuery%20Basics_files/jquery.js"></script>
+<script type="text/javascript">
+   var tryit = new $.TryIt('/jquery/try_jquery.php');
+   tryit.compile();
+</script><div id="source" style="display:none;"></div><div id="supportsource" style="display:none;"></div><div id="utilsource" style="display:none;"></div><div id="extrasource" style="display:none;"></div><div id="inputs" style="display:none;"></div><div id="filename" style="display:none;"></div>
+
+
+<div class="autocomplete-suggestions "></div><div style="display: none;" id="cboxOverlay"></div><div style="display: none;" tabindex="-1" role="dialog" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><button id="cboxPrevious" type="button"></button><button id="cboxNext" type="button"></button><button id="cboxSlideshow"></button><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><title>Home_Page</title>
+ <meta charset="utf-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet"  type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+<script>
+$(document).ready(function(){
+ 
+});
+</script>
+<style>
+body {
+    background-image: url("Built-in_images/wood_background_texture_36573_2560x1600.jpg");
+    background-size: 800px 600px;
+    background-color: #cccccc;}
+p{ 
+ color: white;
+ }
+#sidebar-L,#sidebar-R {
+ width:20%;
+}
+#content {
+ width:60%;
+}
 
+</style>
 </head>
 
 <!-- body for content -->
-<body background="20150713_084842.jpg">
- 
+<body >
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="navigation_bar.html" data-toggle="tooltip" title="navigation bar">My Built-Ins</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home_page.html" data-toggle="tooltip" title="home page">Home</a></li>
+      <li class="active"><a href="products_page.html" data-toggle="tooltip" title="products">Products</a></li>
+      <li class="active"><a href="about_page.html" data-toggle="tooltip" title="about us">About</a></li>
+      <li class="active"><a href="contacts_page.html" data-toggle="tooltip" title="contact us">Contacts</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="container" class="container">
+ <div id="sidebar-L" class="col-sm-4">
+ </div>
+ <div id="content" class="col-sm-4"><img src="Built-in_images/home_page.jpeg" class="img-responsive img-rounded">
+  <p id="greeting">Good morning every one!</p>
+  <p>Maybe you desire that spacious, beautiful looking kitchen suit<br> or maybe you desire to have beautiful built-in wardrobe<br> or... </p>
+ </div>
+ <div id="sidebar-R" class="col-sm-4">
+ </div>
+</div>
+
 </body>
 </html>

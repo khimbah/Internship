@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>the_coffee_shop</title>
+<!-- importing bootstrap and javascript libraries -->
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1"> 
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+ $(document).ready(function(){
+  $("#form_id").submit(function(e){
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("#form_id);
+    $.ajax(
+    {
+        url : formURL,
+        type: "GET",
+        data : postData,
+        success:function() 
+        {
+            console.log('welcome to our server!');
+        },
+        error: function() 
+        {
+          console.log('sorry, something went wrong');  //if fails      
+        }
+    });
+    e.preventDefault(); //STOP default action
+    e.unbind(); //unbind. to stop multiple form submit.
+
+  });
+
+ $("#form_id").submit();
+});
+</script>
+
+</head>
+
+<body>
+<h3 align="center"><font color="brown">Seven Best Coffees</font></h3>
+<img src="images.jpeg" data-align="center" style="width:128px;height:128px;" title="Coffee full of taste, Feel good!"><br>
+<a href="coffee_shop2.html">new coffee shop</a>
+
+<div id="container">
+ <div id="list_items">
+  <ul>
+   <li>Espresso</li>
+   <li>Cappuccino</li>
+   <li>Americano</li>
+   <li>Caffe Latte</li>
+   <li>Caf au Lait</li>
+   <li>Caf Mocha(Mochachino)</li>
+   <li>Caramel Macchiato</li>
+  </ul>
+ </div>
+
+ <div id="options">
+  <form class=".form-inline" id="form_id" role="form" >
+   Choose your coffee:
+   <select>
+    <option>Espresso</option>
+    <option>Cappuccino</option>
+    <option>Americano</option>
+    <option>Caffe Latte</option>
+    <option>Caf au Lait</option>
+    <option checked>Caf Mocha(Mochachino)</option>
+    <option>Caramel Macchiato</option>
+   </select>
+ </div>
+     <br> <input type="submit" value="submit" name="submit"> 
+</div>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 2.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="-33.965508000000000" minlon="18.837893999999999" maxlat="-33.964607000000001" maxlon="18.838842000000000"/></metadata>                
+<rte>
+  <name>Peace Parks Foundation, CT LAB, EDH Flights cope.</name>
+  <extensions>
+    <ogr:descriptio>Peace Parks Foundation, CT LAB, EDH Flights cope.</ogr:descriptio>
+    <ogr:timestamp>Jun 2016 9:47:18 am</ogr:timestamp>
+    <ogr:begin>2016/06/28 07:47:18.000</ogr:begin>
+    <ogr:end>2016/06/28 07:55:29.000</ogr:end>
+    <ogr:tessellate>-1</ogr:tessellate>
+    <ogr:extrude>0</ogr:extrude>
+    <ogr:visibility>-1</ogr:visibility>
+  </extensions>
+  <rtept lat="-33.96544147146313" lon="18.838404666842031">
+    <ele>0.0</ele>
+  </rtept>
+  <rtept lat="-33.965473" lon="18.838249">
+    <ele>166.72</ele>
+  </rtept>
+  <rtept lat="-33.965508" lon="18.83812">
+    <ele>163.77</ele>
+  </rtept>
+  <rtept lat="-33.9655" lon="18.837988">
+    <ele>162.79</ele>
+  </rtept>
+  <rtept lat="-33.96542" lon="18.837923">
+    <ele>162.29</ele>
+  </rtept>
+  <rtept lat="-33.965332" lon="18.837894">
+    <ele>162.94</ele>
+  </rtept>
+  <rtept lat="-33.965248" lon="18.837961">
+    <ele>163.4</ele>
+  </rtept>
+  <rtept lat="-33.965191" lon="18.838057">
+    <ele>162.59</ele>
+  </rtept>
+  <rtept lat="-33.965118" lon="18.838123">
+    <ele>162.83</ele>
+  </rtept>
+  <rtept lat="-33.96505" lon="18.838203">
+    <ele>163.08</ele>
+  </rtept>
+  <rtept lat="-33.964996" lon="18.838301">
+    <ele>163.46</ele>
+  </rtept>
+  <rtept lat="-33.964924" lon="18.838228">
+    <ele>160.42</ele>
+  </rtept>
+  <rtept lat="-33.964832" lon="18.838171">
+    <ele>159.75</ele>
+  </rtept>
+  <rtept lat="-33.964741" lon="18.838139">
+    <ele>158.52</ele>
+  </rtept>
+  <rtept lat="-33.964695" lon="18.838245">
+    <ele>158.32</ele>
+  </rtept>
+  <rtept lat="-33.964638" lon="18.838333">
+    <ele>158.63</ele>
+  </rtept>
+  <rtept lat="-33.964607" lon="18.838436">
+    <ele>159.18</ele>
+  </rtept>
+  <rtept lat="-33.964699" lon="18.83843">
+    <ele>159.58</ele>
+  </rtept>
+  <rtept lat="-33.964783" lon="18.83847">
+    <ele>159.61</ele>
+  </rtept>
+  <rtept lat="-33.964878" lon="18.838505">
+    <ele>159.62</ele>
+  </rtept>
+  <rtept lat="-33.964901" lon="18.838617">
+    <ele>160.03</ele>
+  </rtept>
+  <rtept lat="-33.964905" lon="18.838732">
+    <ele>159.83</ele>
+  </rtept>
+  <rtept lat="-33.964901" lon="18.838842">
+    <ele>159.04</ele>
+  </rtept>
+  <rtept lat="-33.964996" lon="18.83884">
+    <ele>160.62</ele>
+  </rtept>
+  <rtept lat="-33.965084" lon="18.838799">
+    <ele>162.54</ele>
+  </rtept>
+  <rtept lat="-33.965145" lon="18.838718">
+    <ele>163.8</ele>
+  </rtept>
+  <rtept lat="-33.965195" lon="18.838617">
+    <ele>162.85</ele>
+  </rtept>
+  <rtept lat="-33.965275" lon="18.838551">
+    <ele>161.06</ele>
+  </rtept>
+  <rtept lat="-33.965366" lon="18.838476">
+    <ele>160.55</ele>
+  </rtept>
+  <rtept lat="-33.965441532096655" lon="18.838405123710004">
+    <ele>160.59</ele>
+  </rtept>
+</rte>
+</gpx>

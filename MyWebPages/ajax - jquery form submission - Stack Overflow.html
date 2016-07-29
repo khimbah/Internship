@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/QAPage"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>ajax - jquery form submission - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">    
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="jquery form submission">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="Can someone show me a tutorial of using jquery to display successful form submission without refreshing the page. Something like that happens on gmail when a message is delivered and the yellow ove...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/3748710/jquery-form-submission">
+    <link rel="canonical" href="http://stackoverflow.com/questions/3748710/jquery-form-submission">
+
+    
+    
+    <script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/ados.js" async="" type="text/javascript"></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/quant.js" async=""></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/beacon.js" async=""></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/analytics.js" async=""></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/jquery.js"></script>
+    <script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question 'jquery form submission'" href="http://stackoverflow.com/feeds/question/3748710">
+            <script>
+                if (window.history && window.history.replaceState) {
+                    try {
+                        window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+                    }
+                    catch(probablyIE) {
+                        // We tried, we failed, it happens
+                    }
+                }
+            </script>
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/3748710/jquery-form-submission">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/3748710/jquery-form-submission">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/3748710/jquery-form-submission">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({votesCast:[],autoShowCommentHelp:true,showAnswerHelp:true,totalCommentCount:4,shownCommentCount:4,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:3748710});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '3748710');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1469106626,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"cd86f7bb65046b75bbd55f6c4838238e","rep":1,"isRegistered":true,"userType":3,"userId":6612990,"accountId":8854939,"gravatar":"<div class=\"gravatar-wrapper-32\"><img src=\"https://www.gravatar.com/avatar/bf2a2b3c42fe2f27edfb62588c4dda3a?s=32&amp;d=identicon&amp;r=PG&amp;f=1\" alt=\"\" width=\"32\" height=\"32\"></div>","profileUrl":"http://stackoverflow.com/users/6612990/khumbulani","canSeeDeletedPosts":false}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true},"tags":{},"flags":{},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"9f1b173d828e","js/moderator.en.js":"3891ed399a50","js/full-anon.en.js":"521ac539b955","js/full.en.js":"4e71b0df4716","js/wmd.en.js":"96dca883087e","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"a7228f24adb0","js/help.en.js":"41e2b9d43396","js/tageditor.en.js":"43f652d41c31","js/tageditornew.en.js":"0e443e37f3d5","js/inline-tag-editing.en.js":"33defe45205f","js/revisions.en.js":"834877a0c912","js/review.en.js":"72f5d399a41c","js/tagsuggestions.en.js":"7dfec0d2a2d7","js/post-validation.en.js":"973dacc52cf0","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"435fe0ac985d","js/keyboard-shortcuts.en.js":"82ff5a268eab","js/external-editor.en.js":"34f78799ad2d","js/external-editor.en.js":"34f78799ad2d","js/snippet-javascript.en.js":"efbc2ca8ecb9","js/snippet-javascript-codemirror.en.js":"b2092dfbb336"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+<script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/full.js" async=""></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/snippet-javascript.js" async=""></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/post-validation.js" async=""></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/prettify-full.js" async=""></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/external-editor.js" async=""></script><link href="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/jobs-multi.css" rel="stylesheet" type="text/css"><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/ados_002.js" async=""></script><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/wmd.js" async=""></script><style type="text/css"> .wmd-snippet-button span { background-position: 0 0; } .wmd-snippet-button:hover span { background-position: 0 -40px; }</style><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/adFeedback.js" type="text/javascript"></script><link href="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/adFeedback.css" rel="stylesheet"></head>
+<body class="question-page new-topbar">
+    <noscript><div id="noscript-padding"></div></noscript>
+    
+        <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+                    <a href="http://stackoverflow.com/users/logout" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:8 })">log out</a>
+    </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+        </ul>
+    </div>
+    <div class="header" id="your-communities-header">
+        <h3>
+                <a href="http://stackexchange.com/users/8854939/?tab=accounts">your communities</a>
+        </h3>
+            
+            <a href="#" id="edit-pinned-sites">edit</a>
+            <a href="#" id="cancel-pinned-sites" style="display: none;">cancel</a>
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <ul class="my-sites">
+                    <li>
+                        
+
+
+
+    <a href="http://stackoverflow.com/" class="site-link js-gps-track" data-id="1" data-gps-track="
+            site.switch({ target_site:1, item_type:3 }),
+        site_switcher.click({ item_type:1 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+            <span class="rep-score">1</span>
+    </a>
+
+                    </li>
+            </ul>
+                <div class="pinned-site-editor-container" style="display: none;">
+                    <input id="js-site-search-txt" class="site-filter-input" placeholder="Add a Stack Exchange community" type="text">
+                    <input id="pin-site-btn" value="Add" disabled="disabled" type="submit">
+                    <ul class="js-found-sites found-sites"></ul>
+                    <ul class="pinned-site-list sortable" data-custom-list="False">
+                    </ul>
+                    <input value="Save" id="save-pinned-sites-btn" disabled="disabled" type="submit">
+                    <a href="#" id="reset-pinned-sites">reset to default list</a>
+                </div>
+    </div>
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com/" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 158 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+    <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="You have unread inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="">1</span>
+    </a>
+    <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button" data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <a href="http://stackoverflow.com/users/6612990/khumbulani" class="profile-me js-gps-track" data-gps-track="profile_summary.click()">
+                    
+                    <div class="gravatar-wrapper-24" title="Khumbulani"><img src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/bf2a2b3c42fe2f27edfb62588c4dda3a.png" alt="" class="avatar-me js-avatar-me" height="24" width="24"></div>
+
+                    <div class="links-container topbar-flair">
+
+                        <span class="reputation" title="your reputation: 1">
+                            1
+                        </span>
+                    </div>
+                </a>
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+
+
+
+
+        <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+            help
+            <span class="triangle"></span>
+        </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" placeholder="Search Q&amp;A" tabindex="1" autocomplete="off" maxlength="240" type="text">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                            <li><a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab">Jobs</a></li>
+                                                <li><a id="nav-docs" href="http://stackoverflow.com/documentation">Documentation</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+<div class="hero-box docs-announcement">
+    <div class="hero-close js-dismiss">Dismiss</div>
+    
+    
+    <div class="hero-content text-left">
+        <div class="text-wrapper">
+            <div class="hero-title">
+                Announcing Stack Overflow Documentation
+            </div>
+
+            <p class="subtitle">
+                We started with Q&amp;A. Technical documentation is next, and we need your help.
+            </p>
+            <p class="subtitle">
+                Whether you're a beginner or an experienced developer, you <i>can</i> contribute.
+            </p>
+        </div>
+
+            <a href="http://stackoverflow.com/tour/documentation" class="btn js-gps-track" data-gps-track="docs.hero.clicked({target: 1 })">
+                I want to help →
+            </a>
+
+        <div class="img"></div>
+    </div>
+</div>
+
+<script>
+    StackExchange.ready(function() {
+        var location = 0;
+        if ($("body").hasClass("question-page")) {
+            location = 2;
+        } else if ($("body").hasClass("home-page")) {
+            location = 1;
+        }
+
+        $(".docs-announcement .js-dismiss").one("click", function() {
+            $(".docs-announcement").fadeOut("fast");
+            $.post("/dismiss-documentation-hero", { fkey: StackExchange.options.user.fkey, location: location });
+        });
+
+        StackExchange.using("gps", function () {
+            StackExchange.gps.track("docs.hero.show", { location: location }, true);
+        });
+    });
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/3748710/jquery-form-submission" class="question-hyperlink">jquery form submission</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="3748710" id="question">
+
+    <div class="everyonelovesstackoverflow adzerk-vote" id="clc-tlb"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjo0MDQyODMsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNDM0Mjg4LCJkaSI6ImIxYWQ2OWZlNGU1NDQ5YjE5MTdkYTk3YWQ0Nzg0ZjZmIiwiZG0iOjEsImZjIjoxNjQ5MjgyLCJmbCI6MTQ0ODM0MywiaXAiOiIxOTYuMjE0LjU1LjExNSIsImt3IjoiYWpheCxmb3JtcyxqcXVlcnkiLCJudyI6MjIsInBjIjowLCJlYyI6MCwicHIiOjE1NjgsInJ0IjoxLCJyZiI6Imh0dHA6Ly9zdGFja292ZXJmbG93LmNvbS9zZWFyY2g_cT1banF1ZXJ5XStbYWpheF0rZm9ybStzdWJtaXNzaW9uIiwic3QiOjgyNzcsInVrIjoidWUxLTgxOWZhZjJkZWJiNjRhZTQ4MGU5YzM5YjVjYWJkNWMyIiwiem4iOjQzLCJ0cyI6MTQ2OTEwNjYyODU1OSwiYmYiOnRydWUsInBuIjoiY2xjLXRsYiIsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2pvYnMvd2h5LWpvYnM_bWVkPXpyayZyZWY9Y2FuZGlkYXRlcy1hZGQtY3ZfbGItbGF1bmNoLXlvdXJzZWxmIn0&amp;s=hWDd2S80QIlzQoAPNyh5zPS44fU" rel="nofollow" target="_blank" title=""><img src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/662f9647d5c64f7f893d0782908b3c20.png" title="" alt="" border="0" height="90" width="728"></a><img src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/i.gif" style="position:absolute;" border="0" height="0px" width="0px"><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input value="12" name="downvoteReason" type="radio">Uninteresting</label></li><li><label><input value="13" name="downvoteReason" type="radio">Misleading</label></li><li><label><input value="14" name="downvoteReason" type="radio">Offensive</label></li><li><label><input value="15" name="downvoteReason" type="radio">Repetitive</label></li><li><label><input value="16" name="downvoteReason" type="radio">Other</label></li></ul><a href="#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="3748710" type="hidden">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a title="Click to mark as favorite question (click again to undo)" class="star-off" href="#">favorite</a>
+        <div class="favoritecount"><b></b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>Can someone show me a tutorial of using <strong>jquery</strong> to display successful form submission without refreshing the page. <strong>Something
+ like that happens on gmail when a message is delivered and the yellow 
+overlay that shows that you message was delivered and then fade outs.</strong></p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/ajax" class="post-tag js-gps-track" title="show questions tagged 'ajax'" rel="tag">ajax</a> <a href="http://stackoverflow.com/questions/tagged/forms" class="post-tag js-gps-track" title="show questions tagged 'forms'" rel="tag">forms</a> <a href="http://stackoverflow.com/questions/tagged/jquery" class="post-tag js-gps-track" title="show questions tagged 'jquery'" rel="tag">jquery</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/3748710/6612990" title="short permalink to this question" class="short-link" id="link-post-3748710">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/3748710/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>        
+    </td>
+    <td class="post-signature" align="right">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/3748710/revisions" title="show all edits to this post">edited <span title="2012-06-22 07:47:51Z" class="relativetime">Jun 22 '12 at 7:47</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/149206/naveed"><div class="gravatar-wrapper-32"><img src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/EyVWf.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/149206/naveed">NAVEED</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 22,816" dir="ltr">22.8k</span><span title="24 gold badges"><span class="badge1"></span><span class="badgecount">24</span></span><span title="77 silver badges"><span class="badge2"></span><span class="badgecount">77</span></span><span title="119 bronze badges"><span class="badge3"></span><span class="badgecount">119</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2010-09-20 04:26:39Z" class="relativetime">Sep 20 '10 at 4:26</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/303492/ayush"><div class="gravatar-wrapper-32"><img src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/a157e62d64babbf8a1591c1b905c1f76.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/303492/ayush">Ayush</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">50</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-3748710" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-3963262" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Have you even try to google?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/251311/zerkms" title="143,041 reputation" class="comment-user">zerkms</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment3963262_3748710"><span title="2010-09-20 04:28:24Z" class="relativetime-clean">Sep 20 '10 at 4:28</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-3963275" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Try this <a href="http://jquery.malsup.com/form/" rel="nofollow">jquery.malsup.com/form</a> .This is the one I previously used in my project</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/197894/svk" title="1,693 reputation" class="comment-user">svk</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment3963275_3748710"><span title="2010-09-20 04:30:51Z" class="relativetime-clean">Sep 20 '10 at 4:30</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 3 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-3963278" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">funny zerkms...i googled a lot but not found what i was looking 4r</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/303492/ayush" title="50 reputation" class="comment-user owner">Ayush</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment3963278_3748710"><span title="2010-09-20 04:32:14Z" class="relativetime-clean">Sep 20 '10 at 4:32</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-3963296" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><a href="http://api.jquery.com/submit/" rel="nofollow">api.jquery.com/submit</a> <a href="http://api.jquery.com/jQuery.post/" rel="nofollow">api.jquery.com/jQuery.post</a></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/251311/zerkms" title="143,041 reputation" class="comment-user">zerkms</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment3963296_3748710"><span title="2010-09-20 04:36:53Z" class="relativetime-clean">Sep 20 '10 at 4:36</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-3748710" data-rep="50" data-reg="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								1 Answer
+                                <span style="display:none;" itemprop="answerCount">1</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/3748710/jquery-form-submission?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/3748710/jquery-form-submission?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/3748710/jquery-form-submission?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="3748725"></a>
+<div id="answer-3748725" class="answer accepted-answer" data-answerid="3748725" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="3748725" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Use <a href="http://jquery.com/" rel="nofollow">jQuery</a>+<a href="http://www.json.org/" rel="nofollow">JSON</a> combination something like this:</p>
+
+<p><strong>test.php:</strong></p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"jquery-1.4.2.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"jsFile.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;form</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">'_test.php'</span><span class="pln"> </span><span class="atn">method</span><span class="pun">=</span><span class="atv">'post'</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">'ajaxform'</span><span class="tag">&gt;</span><span class="pln">
+ </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">'text'</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">'txt'</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">'Test Text'</span><span class="tag">&gt;</span><span class="pln">
+ </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">'submit'</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">'submit'</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;/form&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'testDiv'</span><span class="tag">&gt;&lt;/div&gt;</span></code></pre>
+
+<p><strong>_test.php:</strong></p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pun">&lt;?</span><span class="pln">php
+      </span><span class="com">// Code here to deal with your form submitted data.</span><span class="pln">
+      $arr </span><span class="pun">=</span><span class="pln"> array</span><span class="pun">(</span><span class="pln"> </span><span class="str">'testDiv'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'Form is successfully submitted.'</span><span class="pln"> </span><span class="pun">);</span><span class="pln">
+      echo json_encode</span><span class="pun">(</span><span class="pln"> $arr </span><span class="pun">);</span><span class="pln">
+</span><span class="pun">?&gt;</span></code></pre>
+
+<p><strong>jsFile.js:</strong></p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">jQuery</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+
+    jQuery</span><span class="pun">(</span><span class="str">'.ajaxform'</span><span class="pun">).</span><span class="pln">submit</span><span class="pun">(</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+        $</span><span class="pun">.</span><span class="pln">ajax</span><span class="pun">({</span><span class="pln">
+            url     </span><span class="pun">:</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'action'</span><span class="pun">),</span><span class="pln">
+            type    </span><span class="pun">:</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'method'</span><span class="pun">),</span><span class="pln">
+            dataType</span><span class="pun">:</span><span class="pln"> </span><span class="str">'json'</span><span class="pun">,</span><span class="pln">
+            data    </span><span class="pun">:</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">serialize</span><span class="pun">(),</span><span class="pln">
+            success </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln"> data </span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                        </span><span class="kwd">for</span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> id </span><span class="kwd">in</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                            jQuery</span><span class="pun">(</span><span class="str">'#'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> id</span><span class="pun">).</span><span class="pln">html</span><span class="pun">(</span><span class="pln"> data</span><span class="pun">[</span><span class="pln">id</span><span class="pun">]</span><span class="pln"> </span><span class="pun">);</span><span class="pln">
+                        </span><span class="pun">}</span><span class="pln">
+                      </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+
+</span><span class="pun">});</span></code></pre>
+
+<p><br><br></p>
+
+<hr>
+
+<p><strong>OR:</strong> </p>
+
+<p>You can use <a href="http://jquery.malsup.com/form/" rel="nofollow">jQuery Form Plugin</a></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/3748725/6612990" title="short permalink to this answer" class="short-link" id="link-post-3748725">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/3748725/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+    <td class="post-signature" align="right">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/3748725/revisions" title="show all edits to this post">edited <span title="2010-09-20 04:40:10Z" class="relativetime">Sep 20 '10 at 4:40</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2010-09-20 04:33:56Z" class="relativetime">Sep 20 '10 at 4:33</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/149206/naveed"><div class="gravatar-wrapper-32"><img src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/EyVWf.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/149206/naveed">NAVEED</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 22,816" dir="ltr">22.8k</span><span title="24 gold badges"><span class="badge1"></span><span class="badgecount">24</span></span><span title="77 silver badges"><span class="badge2"></span><span class="badgecount">77</span></span><span title="119 bronze badges"><span class="badge3"></span><span class="badgecount">119</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-3748725" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-3975472" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">this above code was working fine yesterday but today smthing strange is happening. Instead of adding the content of <b>testDiv</b> along with the content of the page now its going to test.php and showing {testdiv =&gt; "delivered" } in an empty page.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/303492/ayush" title="50 reputation" class="comment-user owner">Ayush</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment3975472_3748725"><span title="2010-09-21 08:48:18Z" class="relativetime-clean">Sep 21 '10 at 8:48</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-3979280" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Ayush: What did you change in yesterday's code. It is showing JSON data(<code>{testdiv =&gt; "delivered" }</code>) in empty page because of the following possible reasons: <b>1.</b> May be your jQuery function is not called because you have removed the <code>class='ajaxform'</code> from <code>form</code> tag which is used to capture submit event in jQuery code. <b>2.</b> May be you have change the selector(<code>.ajaxform</code>) in <code>jQuery('.ajaxform').submit(.....)</code>. <b>3.</b> May be you jQuery code/file is not included properly.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/149206/naveed" title="22,816 reputation" class="comment-user">NAVEED</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment3979280_3748725"><span title="2010-09-21 15:13:44Z" class="relativetime-clean">Sep 21 '10 at 15:13</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-3998768" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">when i check using firebug it shows me -  POST <a href="http://174.132.194.155/%7Ekunal17/devbuzzr/wp-content/themes/street/sms.php" rel="nofollow">174.132.194.155/~kunal17/devbuzzr/wp-content/themes/street/…</a> 	 404 Not Found 1.26s	jquery.min.js (line 130)  i have checked that the address of sms.php is correct</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/303492/ayush" title="50 reputation" class="comment-user owner">Ayush</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment3998768_3748725"><span title="2010-09-23 09:00:42Z" class="relativetime-clean">Sep 23 '10 at 9:00</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 3 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-3748725" data-rep="50" data-reg="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="/questions/3748710/answer/submit" method="post" class="post-form">
+						    <input id="post-id" value="3748710" type="hidden">
+                            <input id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" type="hidden">
+                            <input name="referrer" value="http://stackoverflow.com/search?q=%5Bjquery%5D+%5Bajax%5D+form+submission" type="hidden">
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: false,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul class="wmd-button-row" id="wmd-button-row"><li title="Strong &lt;strong&gt; Ctrl+B" id="wmd-bold-button" style="left: 0px;" class="wmd-button"><span style="background-position: 0px 0px;"></span></li><li title="Emphasis &lt;em&gt; Ctrl+I" id="wmd-italic-button" style="left: 25px;" class="wmd-button"><span style="background-position: -20px 0px;"></span></li><li id="wmd-spacer1" class="wmd-spacer wmd-spacer1"></li><li title="Hyperlink &lt;a&gt; Ctrl+L" id="wmd-link-button" style="left: 75px;" class="wmd-button"><span style="background-position: -40px 0px;"></span></li><li title="Blockquote &lt;blockquote&gt; Ctrl+Q" id="wmd-quote-button" style="left: 100px;" class="wmd-button"><span style="background-position: -60px 0px;"></span></li><li title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K" id="wmd-code-button" style="left: 125px;" class="wmd-button"><span style="background-position: -80px 0px;"></span></li><li title="Image &lt;img&gt; Ctrl+G" id="wmd-image-button" style="left: 150px;" class="wmd-button"><span style="background-position: -100px 0px;"></span></li><li class="wmd-button wmd-snippet-button" style="left:175px" id="wmd-snippet-button" title="JavaScript/HTML/CSS snippet Ctrl-M"><span style="background-image: url(&quot;/content/Shared/balsamiq/wmd-mockup-button.png&quot;);"></span></li><li style="left: 220px;" id="wmd-spacer2" class="wmd-spacer wmd-spacer2"></li><li title="Numbered List &lt;ol&gt; Ctrl+O" id="wmd-olist-button" style="left: 225px;" class="wmd-button"><span style="background-position: -120px 0px;"></span></li><li title="Bulleted List &lt;ul&gt; Ctrl+U" id="wmd-ulist-button" style="left: 250px;" class="wmd-button"><span style="background-position: -140px 0px;"></span></li><li title="Heading &lt;h1&gt;/&lt;h2&gt; Ctrl+H" id="wmd-heading-button" style="left: 275px;" class="wmd-button"><span style="background-position: -160px 0px;"></span></li><li title="Horizontal Rule &lt;hr&gt; Ctrl+R" id="wmd-hr-button" style="left: 300px;" class="wmd-button"><span style="background-position: -180px 0px;"></span></li><li style="left: 346px;" id="wmd-spacer3" class="wmd-spacer wmd-spacer3"></li><li title="Undo - Ctrl+Z" id="wmd-undo-button" style="left: 350px;" class="wmd-button"><span style="background-position: -200px -20px;"></span></li><li title="Redo - Ctrl+Shift+Z" id="wmd-redo-button" style="left: 375px;" class="wmd-button"><span style="background-position: -220px -20px;"></span></li><li title="Markdown Editing Help" style="right: 0px;" id="wmd-help-button" class="wmd-button wmd-help-button active-help"><span style="background-position: -240px 0px;"></span></li><div style="right: -13px; width: 660px; top: 41px;" id="mdhelp" class="mdhelp">
+    <ul id="mdhelp-tabs" class="mdhelp-tabs">
+        <li data-tab="mdhelp-links" data-buttons="link">Links</li>
+        <li data-tab="mdhelp-images" data-buttons="image">Images</li>
+        <li data-tab="mdhelp-styles" data-buttons="bold,italic,heading">Styling/Headers</li>
+        <li data-tab="mdhelp-lists" data-buttons="olist,ulist">Lists</li>
+        <li data-tab="mdhelp-blockquotes" data-buttons="quote">Blockquotes</li>
+        <li data-tab="mdhelp-code" data-buttons="code">Code</li>
+        <li data-tab="mdhelp-html"> HTML </li>
+        <li style="float:right"><a href="http://stackoverflow.com/editing-help" target="_blank">advanced help »</a></li>
+    </ul>
+    
+    <div class="mdhelp-tab" id="mdhelp-links">
+            <p>
+                In most cases, a plain URL will be recognized as such and automatically linked:
+            </p>
+            <pre>Visit http://area51.stackexchange.com/ regularly!
+Use angle brackets to force linking: Have you seen &lt;http://superuser.com&gt;?
+</pre>
+            <p>
+                To create fancier links, use Markdown:
+            </p>
+                <pre>Here's [a link](http://www.example.com/)! And a reference-style link to [a panda][1].
+References don't have to be [numbers][question].
+
+ [1]: http://notfound.stackexchange.com/
+ [question]: http://english.stackexchange.com/questions/11481
+</pre>
+                <p>You can add tooltips to links:</p>
+<pre>Click [here](http://diy.stackexchange.com<span class="spaces">&nbsp;</span>"this text appears when you mouse over")!
+This works with [reference links][blog] as well.
+
+ [blog]: http://blog.stackoverflow.com/<span class="spaces">&nbsp;</span>"click here for updates"
+</pre>
+    </div>
+
+    <div class="mdhelp-tab" id="mdhelp-images">
+        <p>Images are exactly like links, but they have an exclamation point in front of them:</p>
+        <pre>![a busy cat](http://sstatic.net/Sites/stackoverflow/img/error-lolcat-problemz.jpg)
+![two muppets][1]
+
+ [1]: http://i.imgur.com/I5DFV.jpg "tooltip"
+</pre>
+        <p>
+            The word in square brackets is the alt text, which gets displayed if the browser
+ can't show the image. Be sure to include meaningful alt text for screen-reading
+ software.
+        </p>
+   
+    </div>
+    <div class="mdhelp-tab" id="mdhelp-styles">
+        <div class="col1">
+            <p>Be sure to use text styling sparingly; only where it helps readability.</p>
+                <pre>*This is italicized*, and so
+is _this_.
+
+**This is bold**, just like __this__.
+
+You can ***combine*** them
+if you ___really have to___.
+</pre>
+        
+        </div>
+        <div class="col2">
+            <p>
+                To break your text into sections, you can use headers:
+            </p>
+                <pre>A Large Header
+==============
+
+Smaller Subheader
+-----------------
+</pre>
+            <p>
+                Use hash marks if you need several levels of headers:</p>
+    <pre># Header 1 #
+## Header 2 ##
+### Header 3 ###
+</pre>
+
+            
+        </div>
+
+    </div>
+    <div class="mdhelp-tab" id="mdhelp-lists">
+        <p>Both bulleted and numbered lists are possible:</p>
+        <div class="col1">
+<pre>-<span class="spaces">&nbsp;</span>Use a minus sign for a bullet
++<span class="spaces">&nbsp;</span>Or plus sign
+*<span class="spaces">&nbsp;</span>Or an asterisk
+
+1.<span class="spaces">&nbsp;</span>Numbered lists are easy
+2.<span class="spaces">&nbsp;</span>Markdown keeps track of
+ the numbers for you
+7.<span class="spaces">&nbsp;</span>So this will be item 3.
+</pre>
+        </div>
+        <div class="col2">
+<pre>1.<span class="spaces">&nbsp;</span>Lists in a list item:
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span class="spaces">&nbsp;</span>Indented four spaces.
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*<span class="spaces">&nbsp;</span>indented eight spaces.
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span class="spaces">&nbsp;</span>Four spaces again.
+2.<span class="spaces">&nbsp;&nbsp;</span>You can have multiple
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>paragraphs in a list items.
+<span class="spaces">&nbsp;</span>
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>Just be sure to indent.
+</pre>        
+        </div>
+    </div>
+
+    <div class="mdhelp-tab" id="mdhelp-blockquotes">
+        <div class="col1">
+            <pre>&gt; Create a blockquote by
+&gt; prepending “&gt;” to each line.
+&gt;
+&gt; Other formatting also works here, e.g.
+&gt;
+&gt; 1. Lists or
+&gt; 2. Headings:
+&gt;
+&gt; ## Quoted Heading ##
+</pre>
+        </div>
+        <div class="col2">
+                <p>
+                    You can even put blockquotes in blockquotes:
+                </p>
+                <pre>&gt; A standard blockquote is indented
+&gt; &gt; A nested blockquote is indented more
+&gt; &gt; &gt; &gt; You can nest to any depth.
+</pre>
+        </div>
+    </div>
+
+    <div class="mdhelp-tab" id="mdhelp-code">
+        <p>
+            To create code blocks or other preformatted text, indent by four spaces:
+        </p>
+        <pre><span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>This will be displayed in a monospaced font. The first four spaces
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>will be stripped off, but all other whitespace will be preserved.
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>Markdown and HTML are turned off in code blocks:
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;i&gt;This is not italic&lt;/i&gt;, and [this is not a link](http://example.com)
+</pre>
+        <p>
+            To create not a block, but an inline code span, use backticks:
+        </p>
+        <pre>The `$` character is just a shortcut for `window.jQuery`.
+</pre>
+        <p>
+            If you want to have a preformatted block within a list, indent by eight spaces:
+        </p>
+        <pre>1. This is normal text.
+2. So is this, but now follows a code block:
+<span class="spaces">&nbsp;</span>
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Skip a line and indent eight spaces.
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>That's four spaces for the list
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>and four to trigger the code block.
+</pre>
+    </div>
+
+    <div class="mdhelp-tab" id="mdhelp-html">
+        <p>
+            If you need to do something that Markdown can't handle, use HTML. Note that <a href="http://meta.stackexchange.com/questions/1777/what-html-tags-are-allowed" target="_blank">we only support a very strict subset of HTML!</a>
+        </p>
+        <pre>Strikethrough humor is &lt;strike&gt;funny&lt;/strike&gt;.
+</pre>
+        <p>
+            Markdown is smart enough not to mangle your span-level HTML:
+        </p>
+        <pre>&lt;b&gt;Markdown works *fine* in here.&lt;/b&gt;
+</pre>
+        <p>
+            Block-level HTML elements have a few restrictions:
+        </p>
+        <ol>
+            <li>They must be separated from surrounding text by blank lines.</li>
+            <li>The begin and end tags of the outermost block element must not be indented.</li>
+            <li>Markdown can't be used within HTML blocks.</li>
+        </ol>
+        <br>
+        <pre>&lt;pre&gt;
+ You can &lt;em&gt;not&lt;/em&gt; use Markdown in here.
+&lt;/pre&gt;
+</pre>
+    </div>
+
+    <div class="cbt"></div>
+</div></ul></div>
+            <div style="clear: both; height: 28px;"></div><textarea id="wmd-input" class="wmd-input processed" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        <div style="margin-right: 0px;" class="grippie"></div></div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" value="cd86f7bb65046b75bbd55f6c4838238e" type="hidden">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" value="Post Your Answer" tabindex="110" type="submit">
+									<a href="#" class="btn-clear discard-answer dno">discard</a>
+								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/ajax" class="post-tag" title="show questions tagged 'ajax'" rel="tag">ajax</a> <a href="http://stackoverflow.com/questions/tagged/forms" class="post-tag" title="show questions tagged 'forms'" rel="tag">forms</a> <a href="http://stackoverflow.com/questions/tagged/jquery" class="post-tag" title="show questions tagged 'jquery'" rel="tag">jquery</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+
+
+
+<script>
+    window.showNewUser = false;
+
+</script>
+
+<div class="module newuser newuser-greeting" id="newuser-box" style="display:none;">
+    <h4>Hello World!</h4>
+    <div>
+        <p>This is a collaboratively edited question and answer site for <b>professional and enthusiast programmers</b>. It's 100% free.</p><p>Got a question about the site itself? <a href="http://meta.stackoverflow.com/">meta</a> is the place to talk about things like what questions are appropriate, what tags we should use, etc.</p>
+        <p class="ar">
+                <a href="http://stackoverflow.com/tour?mnu=1">about »</a>&nbsp;&nbsp;&nbsp;
+            <a href="http://stackoverflow.com/help?mnu=1">help »</a>
+                &nbsp; <a href="http://meta.stackoverflow.com/">meta »</a>
+        </p>
+    </div>
+</div>
+    <script>
+    if (showNewUser) {
+        document.getElementById('newuser-box').style.display = '';
+    }
+    </script>						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2010-09-20 04:26:39Z"><b>5 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>175 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/3748710/jquery-form-submission?lastactivity" class="lastactivity-link" title="2012-06-22 07:47:51Z">4 years ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+			<div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Blog
+                </div>
+                <hr>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="http://blog.stackoverflow.com/2016/07/introducing-stack-overflow-documentation-beta/?cb=1" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://blog.stackoverflow.com/2016/07/introducing-stack-overflow-documentation-beta/?cb=1" class="question-hyperlink">Introducing Stack Overflow Documentation Beta</a>
+                </div>
+                <br class="cbt">
+            </div>
+                <div class="bulletin-title">
+                    Featured on Meta
+                </div>
+                <hr>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="http://meta.stackoverflow.com/questions/328405/documentation-has-entered-public-beta?cb=1" class="question-hyperlink">
+<div class="favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://meta.stackoverflow.com/questions/328405/documentation-has-entered-public-beta?cb=1" class="question-hyperlink">Documentation Has Entered Public Beta</a>
+                </div>
+                <br class="cbt">
+            </div>
+                <div class="bulletin-title">
+                    Hot Meta Posts
+                </div>
+                <hr>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <span title="Vote score (upvotes - downvotes)">14</span>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://meta.stackoverflow.com/questions/328310/does-a-zero-vote-question-affect-rate-limit-question-bans?cb=1" class="question-hyperlink">Does a zero-vote question affect rate limit/question bans?</a>
+                </div>
+                <br class="cbt">
+            </div>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <span title="Vote score (upvotes - downvotes)">10</span>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://meta.stackoverflow.com/questions/328444/documenting-the-problems-with-documentation?cb=1" class="question-hyperlink">Documenting the problems with documentation</a>
+                </div>
+                <br class="cbt">
+            </div>
+    </div>
+</div>			
+			<div class="everyonelovesstackoverflow orange looking tagged clc-jobs-multi" id="hireme"><a href="http://stackoverflow.com/jobs" target="_blank" data-at="0" data-tz="1" data-ti="0" class="top "><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li><div class="job-wrap"><a class="job" data-at="0" data-tz="3" data-ti="179633" href="http://stackoverflow.com/jobs/93650/software-developer-thoughtworks-johannesburg" target="_blank" title="Software Developer at ThoughtWorks Johannesburg, South Africa. Click to learn more."><div class="title">Software Developer</div><div><span class="company">ThoughtWorks Johannesburg, South Africa</span><span class="location">Johannesburg, South Africa</span></div><span class="post-tag">architecture</span><span class="post-tag">design</span></a></div></li><li><div class="job-wrap"><a class="job" data-at="0" data-tz="3" data-ti="219398" href="http://stackoverflow.com/jobs/119398/java-developers-jhb-pta-cpt-bbd" target="_blank" title="Java Developers (Jhb, Pta, Cpt) at BBD. Click to learn more."><div class="title">Java Developers (Jhb, Pta, Cpt)</div><div><span class="company">BBD</span><span class="location">Johannesburg, South Africa</span></div><span class="post-tag">javascript</span><span class="post-tag">java</span></a></div></li><li><div class="job-wrap"><a class="job" data-at="0" data-tz="3" data-ti="214691" href="http://stackoverflow.com/jobs/114691/ruby-software-architect-30-hr-crossover" target="_blank" title="Ruby Software Architect - $30/hr at Crossover. Click to learn more."><div class="title">Ruby Software Architect - $30/hr</div><div><span class="company">Crossover</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag">git</span><span class="post-tag">javascript</span></a></div></li><li><div class="job-wrap"><a class="job" data-at="0" data-tz="3" data-ti="220334" href="http://stackoverflow.com/jobs/120334/senior-full-stack-web-developer-cqs-technology-holdings" target="_blank" title="Senior Full Stack Web Developer at CQS Technology Holdings. Click to learn more."><div class="title">Senior Full Stack Web Developer</div><div><span class="company">CQS Technology Holdings</span><span class="location">Johannesburg, South Africa</span></div><span class="post-tag">javascript</span><span class="post-tag">angularjs</span></a></div></li></ul><div style="clear:both"></div></div><img class="impression" src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/soi.gif" style="display:none;"></div>
+        <script>
+;"use strict";(function(n){var r=["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com"],t,i;(r[0]==="*"||r.indexOf(location.hostname)!==-1)&&(t=window,t.clc_opts=n,n.autoload&&(t.clc_init=t.clc_init||[],t.clc_init.push(function(){return t.clc.load()})),i=document.createElement("script"),i.async=!0,i.src=n.lib,document.body.appendChild(i))}).call(null, {"az":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com"],"h":"clc.stackoverflow.com","u":"//clc.stackoverflow.com/p.js","lib":"//cdn.sstatic.net/clc/clc.min.js?v=25713ebe3e2c"});        </script>
+			
+
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/206384?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1395</div></a><a href="http://stackoverflow.com/questions/206384/how-to-format-a-microsoft-json-date?rq=1" class="question-hyperlink">How to format a Microsoft JSON date?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/3776900?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">2</div></a><a href="http://stackoverflow.com/questions/3776900/form-submit-without-page-refresh?rq=1" class="question-hyperlink">Form submit without page refresh</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/5546173?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">3</div></a><a href="http://stackoverflow.com/questions/5546173/detect-form-submission-finish-with-jquery?rq=1" class="question-hyperlink">detect form submission finish with jquery</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/8397108?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/8397108/multiple-form-submission-with-ajax-and-jquery?rq=1" class="question-hyperlink">Multiple form submission with ajax and jquery</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/11569973?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/11569973/ajax-jquery-form-submission?rq=1" class="question-hyperlink">Ajax &amp; Jquery form submission</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/17172347?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/17172347/handle-form-submission-in-jquery?rq=1" class="question-hyperlink">Handle form submission in jQuery</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/21212632?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/21212632/ajax-form-submission-with-php-and-jquery?rq=1" class="question-hyperlink">AJAX form submission with php and jquery</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/29751272?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">4</div></a><a href="http://stackoverflow.com/questions/29751272/ajax-form-submission-with-jquery-validation-plugin-is-not-working?rq=1" class="question-hyperlink">Ajax form submission with Jquery validation plugin is not working</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/31785015?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/31785015/jquery-ajax-submission-form-error?rq=1" class="question-hyperlink">Jquery AJAX submission form error</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/35961492?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/35961492/ajax-form-submission-with-jquery-multiple-forms?rq=1" class="question-hyperlink">ajax form submission with jquery multiple forms</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/73024/why-would-a-grad-school-reduce-fees-to-a-trivial-amount-rather-than-reduce-stipe" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why would a grad school reduce fees to a trivial amount rather than reduce stipend?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/47834/is-the-whip-sword-feasible" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is the whip sword feasible
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/130531/what-is-the-best-way-to-respond-to-phishing-emails-sent-from-a-government-domain" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the best way to respond to phishing emails sent from a government domain?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/121160/reproducing-the-xkcd-self-description-comic" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Reproducing the xkcd "Self-Description" comic
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/96912/use-of-without-in-the-howling-of-wolves-without-grew-louder" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Use of 'without' in 'the howling of wolves without grew louder...'
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/17321/did-the-challenger-srbs-fail-due-to-design-for-reuse" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Did the Challenger SRBs fail due to design for reuse?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/801110/message-overflow-in-notification-bubble" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Message overflow in notification bubble
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/269077/how-many-photons-are-needed-to-make-a-light-wave" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How many photons are needed to make a light wave?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/96757/why-grand-theft-auto-not-grand-auto-theft" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why "grand theft auto", not "grand auto theft"?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/67592/can-a-check-be-destroyed-or-does-it-have-to-be-returned-to-the-person" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can a check be destroyed or does it have to be returned to the person
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/325308/how-should-i-store-readonly-data-to-deploy-with-my-application" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How should I store readonly data to deploy with my application?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/130562/why-do-i-need-kerberos-when-i-could-just-use-a-username-and-password-to-access-s" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do I need Kerberos when I could just use a username and password to access services?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-latin" title="Latin Language Stack Exchange"></div><a href="http://latin.stackexchange.com/questions/1233/what-is-a-best-man-in-latin" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:644 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is a best man in Latin?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/37983/what-is-the-next-number-in-sequence-and-why" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the next number in sequence and why?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1866026/how-can-you-define-successors-over-the-reals" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How Can You Define Successors Over The reals?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-bicycles" title="Bicycles Stack Exchange"></div><a href="http://bicycles.stackexchange.com/questions/41336/how-to-ride-when-the-weather-is-hot" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:126 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to ride when the weather is hot?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1866135/discrete-math-understanding-a-proof-involving-the-definition-of-divisibility" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Discrete Math Understanding a proof involving the definition of divisibility
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-sharepoint" title="SharePoint Stack Exchange"></div><a href="http://sharepoint.stackexchange.com/questions/187297/how-to-get-configuration-sharepoint-database-server-using-power-shell" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:232 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to get Configuration SharePoint Database Server using Power-Shell?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/297288/using-wildcard-in-gnu-make-pattern-rule" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Using wildcard in GNU Make pattern rule
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/247087/why-is-a-capacitor-used-to-protect-cmos-chips" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is a capacitor used to protect CMOS chips?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-photo" title="Photography Stack Exchange"></div><a href="http://photo.stackexchange.com/questions/80291/took-my-first-ever-4k-picture-why-is-it-so-disappointing" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:61 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Took my first ever 4k picture; Why is it so disappointing?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/38492059/why-doesnt-the-function-printk-use-a-comma-to-separate-parameters" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why doesn't the function printk() use a comma to separate parameters?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/1103053/buy-old-windows-version-now-and-still-get-the-upgrade-for-free" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Buy old Windows version now and still get the upgrade for free?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/268568/why-are-the-harmonics-of-a-piano-tone-not-multiples-of-the-base-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why are the harmonics of a piano tone not multiples of the base frequency?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/3748710" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/3748710/ivc/4d67');});
+</script>
+<noscript>
+    <div><img src="/posts/3748710/ivc/4d67" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+    <script>
+        $('#wmd-input').one("keypress", function() {
+            $.ajax({
+                url: '/accounts/email-settings-form',
+                cache: false,
+                success: function(data) {
+                    $('#submit-button').parent().prepend(data);
+                }
+            });
+        });
+
+    </script>
+
+        </div>
+    </div><script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/clc.js" async=""></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (9)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (5)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.7.21.3801
+            </div>
+                </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+        <script> setTimeout(function() { $("#adzerk-user-match").remove(); }, 2000);</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            
+            ga('create', 'UA-5620270-1', {'userId': '8854939' });
+            ga('set', 'dimension1', '8854939');             ga('set', 'dimension2', '|ajax|forms|jquery|');             ga('send', 'pageview');
+        
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+<script src="ajax%20-%20jquery%20form%20submission%20-%20Stack%20Overflow_files/p.js" async=""></script></body></html>

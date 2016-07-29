@@ -3,29 +3,61 @@
 <head><title>my trial navigation bar</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script>
+   $(document).ready(function(){
+     $('[data-toggle="tooltip"]').tooltip();   
+ });
+</script>
+<style>
+body {
+    background-image: url("Built-in_images/wood_background_texture_36573_2560x1600.jpg");
+    background-size: 800px 600px;
+    background-color: #cccccc;}
+#navbar,#content,h3,h4{
+     color:#ffffff;
+}
+</style>
+<style>
+#navbar {
+  float: left;
+  width: 20%;
+}
+#content {
+  float: center ;
+  width: 60% ;
+}
+#sidebar {
+  float: right;
+  width: 20%;
+}
+</style>
+ 
 </head>
 
 <body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">My Built-Ins</a>
+      <a class="navbar-brand" href="navigation_bar.html" data-toggle="tooltip" title="navigation bar">My Built-Ins</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contacts</a></li>
+      <li class="active"><a href="home_page.html" data-toggle="tooltip" title="home page">Home</a></li>
+      <li class="active"><a href="products_page.html" data-toggle="tooltip" title="products">Products</a></li>
+      <li class="active"><a href="about_page.html" data-toggle="tooltip" title="about us">About</a></li>
+      <li class="active"><a href="contacts_page.html" data-toggle="tooltip" title="contact us">Contacts</a></li>
     </ul>
   </div>
 </nav>
   
 <div class="container">
-  <h3>For good times and food times.</h3>
-  <p>Come to your place at My Built-Ins!.</p>
+  <h3>For good times are never over.</h3>
+  <p><h4>Come to your place at My Built-Ins!</h4></p>
+  <div id="navbar" ><!-- Navigation --> If I were to put something here what would happen <br>answer is:<br>this,or,that</div>
+  <div id="content" ><!-- Content here -->What about here, what would happen?<br>same answer:<br>this, or, that. Just fooling around, sorry!</div><br>
+  <div id="sidebar"><!-- sidebar content  --></div>
 </div>
 </body>
 </html>
