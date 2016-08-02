@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>my trial navigation bar</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script>
+   $(document).ready(function(){
+     $('[data-toggle="tooltip"]').tooltip();   
+ });
+</script>
+<style>
+body{
+    background-image: url("Built-in_images/wood_background_texture_36573_2560x1600.jpg");
+    background-size: 800px 600px;
+    background-color: #cccccc;}
+#footer,#navbar,#content,h3,h4, p{
+     color:#ffffff;
+}
+#footer {
+  position:fixed;
+   left:0px;
+   bottom:0px; 
+   width:100%;
+   height: 5%;
+   color:#ffffff;
+}
+
+#navbar {
+  float: left;
+  width: 20%;
+}
+#content {
+  float: center ;
+  width: 60% ;
+}
+#sidebar {
+  float: right;
+  width: 20%;
+}
+</style>
+ 
+</head>
+
+<body>
+<div class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="navigation_bar.html" data-toggle="tooltip" title="navigation bar">My Built-Ins</a>
+    </div>
+    <ul class="nav navbar-nav nav-pills nav-stacked">
+      <li class="active"><a href="home_page.html" data-toggle="tooltip" title="home page">Home</a></li>
+      <li ><a href="products_page.html" data-toggle="tooltip" title="products">Products</a></li>
+      <li ><a href="about_page.html" data-toggle="tooltip" title="about us">About</a></li>
+      <li ><a href="contacts_page.html" data-toggle="tooltip" title="contact us">Contacts</a></li>
+    </ul>
+  </div>
+</div>
+  
+<div class="container">
+  <h3>For good times are never over.</h3>
+  <p><h4>Come to your place at My Built-Ins!</h4></p>
+  <div id="navbar" class="col-xs-3"><!-- Navigation --><p> If I were to put something here what would happen <br>answer is:<br>this,or,that</div></p>
+  <div id="content"  class="col-xs-6"><img src="Built-in_images/home_page.jpeg" class="img-responsive img-rounded"><p><!-- Content here -->What about here, what would happen?<br>same answer:<br>this, or, that. Just fooling around, sorry!</p></div><br>
+  <div id="sidebar" class="col-xs-3"><p>I hope this text appears on the right space too, it sure will!</p><!-- sidebar content  --></div>
+ </div>
+</div>
+
+<div id="footer" class="navbar navbar-inverse">
+ <div class="container-fluid">
+  <p>Posted by:<i>Khumbulani Mavundla</i></p>
+  <p>Contact information: <a href="mailto:khihmbah@gmail.com">
+  khihmbah@gmail.com</a>.</p>
+ </div>
+</div>
+ 
+</body>
+</html>
+
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>For more information:</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript"  src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ <style type="text/css">
+   body {
+     background-image: url("Built-in_images/wood_background_texture_36573_2560x1600.jpg");
+     background-size: 800px 600px;
+     background-color: #cccccc;}
+ .container {
+        width: 500px;
+        clear: both;
+    }
+    .container input {
+        width: 100%;
+        clear: both;
+    }
+ .form-control{text-color:black
+;}
+label, p {
+ color: white;
+}
+#sidebar-L,#sidebar-R {
+ width:20%;
+}
+#content {
+ width:60%;
+}
+#footer {
+  position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   height: 5%;
+   color:#ffffff;
+
+ </style>
+
+</head>
+
+<!-- content for the page  -->
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="navigation_bar.html" data-toggle="tooltip" title="navigation bar">My Built-Ins</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home_page.html" data-toggle="tooltip" title="home page">Home</a></li>
+      <li class="active"><a href="products_page.html" data-toggle="tooltip" title="products">Products</a></li>
+      <li class="active"><a href="about_page.html" data-toggle="tooltip" title="about us">About</a></li>
+      <li class="active"><a href="contacts_page.html" data-toggle="tooltip" title="contact us">Contacts</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="container" class="row">
+ <div class="col-xs-3"><p> If white text appears here then my side bar is working very well. </p><!-- sidebar-L  --></div>
+  <div class="col-xs-6"> 
+   <form action="" method="post" role="form" class="">
+     <div class="form-group">
+       <label class="" for="client_name">Your name:</label>
+       <input type="text" name="client_name" class="form-control">
+     </div>
+
+     <div class="form-group">
+       <label class="" for="email">Your e-mail:</label>
+       <input type="text" name="client_email" class="form-control">
+     </div>
+  
+     <div class="form-group">
+       <label class="" for="client_message">Message:</label>
+       <textarea name="client_message" class="form-control"></textarea> 
+      </div>
+
+       <div class="col-sm-offset-1 col-sm-20"><button type="submit" value="Send" class="btn btn-info btn-lg " name="Send">Send</button></div><br>
+       <div class="col-sm-offset-1 col-sm-20"> <button type="reset" value="Clear" class="btn btn-primary btn-lg " name="Clear">Clear</button></div>
+   </form>
+  </div>
+ <div class="col-xs-3"><!-- sidebar-R  --></div> 
+ <p>If xs does work then cool!,else if xs doesn't then bad!</p>
+</div>
+<div id="footer" class="navbar navbar-inverse">
+ <div class="container-fluid">
+  <p>Posted by:<i>Khumbulani Mavundla</i></p>
+  <p>Contact information: <a href="mailto:khihmbah@gmail.com">
+  khihmbah@gmail.com</a>.</p>
+ </div>
+</div>
+
+</body>
+</html>
