@@ -3,9 +3,10 @@ from flask import Response
 
 
 app = Flask(__name__, static_folder='/home/cybernerd/Work/Internship/MyWebPages/app/', template_folder='/home/cybernerd/Work/Internship/MyWebPages/app/templates/')
-
-
 app.debug=True
+login_manager = LoginManager()
+login_manager.init_app(app)
+
 
 @app.route('/contact_handler', methods = ['POST','GET'])
 def contact_handler():
