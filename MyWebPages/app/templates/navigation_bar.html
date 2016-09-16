@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html {% block html_attribs %}lang="en"{% endblock %}>
+  <head>
+
+    {% block head %}
+
+    <title> {% block title %}{% endblock %} navigation bar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block styles %}
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    {% endblock %}
+
+    {% block scripts  %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+     $(document).ready(function(){
+     $('[data-toggle="tooltip"]').tooltip();   
+     });
+    </script>
+    <script>
+function blinker() {
+  $('.blinking').fadeOut(500);
+  $('.blinking').fadeIn(500);
+}
+setInterval(blinker, 1000);
+</script>
+    {% endblock %}
+
+ <style type "text/css">
+ 
+ html {
+  position: relative;
+  min-height: 100%;
+     }
+ body{
+    background-size: 800px 600px;
+    background-color: maroon;
+    margin-bottom:10;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    }  
+ #navbar,#content,h1,h3,h4, p {
+     margin: 0 auto;
+     color:black;
+ }
+ html, body, #content, .container-fluid{
+                                    overflow-y: auto;
+                                   
+                                   }
+ #footer {
+     clear: both;
+     position:fixed;
+     z-index:10;
+     left:0px;
+     bottom:0px; 
+     max-width:100%;
+     color:grey;
+     margin: auto;
+     padding: 1rem;
+     right: 0;
+ }
+ #footer, .push {
+ height:5;
+ }
+ #navbar {
+   float: both;
+   max-width:100%; 
+ }
+ #content {
+   float: center ;
+   max-width: 100%;
+ }
+  </style>
+
+  {% endblock %} 
+
+ </head>
+
+<body>
+<div class="navbar navbar-inverse">   
+  {% block navigation %}
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('navigation')}}" data-toggle="tooltip" title="navigation bar"><b>ARBITER</b></a>
+    </div>
+    <ul class="nav navbar-nav nav-pills nav-stacked">
+      <li class="active"><a href="{{url_for('home')}}" data-toggle="tooltip" title="home page">Home</a></li>
+      <li><a href="{{url_for('carousel')}}" data-toggle="tooltip" title="gallery">Gallery</a></li>
+      <li><a href="{{url_for('products')}}" data-toggle="tooltip" title="products">Products</a></li>
+      <li><a href="{{url_for('about')}}" data-toggle="tooltip" title="about us">About</a></li>
+      <li><a href="{{url_for('contacts')}}" data-toggle="tooltip" title="contact us">Contacts</a></li>
+         <li><a href="{{url_for('signup')}}" data-toggle="tooltip" title="sign up">Sign Up</a></li>
+         <li><a href="{{url_for('login')}}" data-toggle="tooltip" title="login">Login</a></li>
+         <li><a href="{{url_for('profile')}}" data-toggle="tooltip" title="user profile">My Profile</a></li>
+         <li><a href="{{url_for('accounts')}}" data-toggle="tooltip" title="accounts">Accounts</a></li>
+    </ul>
+  </div>
+ {% endblock %}
+</div>
+
+<div class="container-fluid">
+ {% block content %}
+  <div class="row">
+    <div class="col-sm-3 container">
+    <div class="jumbotron">
+     <p><h3>Be the final <i>ARBITER</i> in your kitchen!</h3></p>
+         
+    <div><img src="/img/20150717_101552.jpg" class="img-responsive img-thumbnail center-block img-fluid" height="640"></div> 
+    </div>
+    </div>
+  <div class="col-sm-6 container">
+  <div class="jumbotron">
+   <div class="center-block table">
+    <tbody><tr><td><a href="{{url_for('products')}}"><img src="/img/20150713_084842.jpg" class="img-responsive img-thumbnail center-block img-fluid" height="640" width="480"></a></td></tr>
+    <tr><td style="align:center;"><caption>Spacious Kitchens</caption></td></tr> 
+    </tbody>
+   </div>
+  </div>
+  </div>
+  <div class="col-sm-3 container">
+  <div class="jumbotron">
+   <div style="color:black;"><h4><marquee direction="left">Good news,&nbsp;specials are on the way beginning from&nbsp;<i>01 October 2016!</i></marquee><h4></div>
+  </div>
+ </div>
+ </div>
+  {% endblock %}
+</div>
+  <div class="push"></div>
+<div id="footer" class="navbar navbar-inverse nav-stacked row footer">  {% block footer %}
+ <span class="Footer-logo icon-sammy"></span>
+  <div class="container-fluid col-md-4">
+   <p style="color:grey;">Posted by:<i>Khumbulani Mavundla</i></p>
+   <p style="color:grey;">Contact information: <a href="mailto:khihmbah@gmail.com">
+   khihmbah@gmail.com</a>.</p></div>
+  <span class="footer_text col-md-8 text-center center-block"> Copyright &copy; 2016<br/>All Rights Reserved.</span> 
+  <ul class="Footer-nav"></ul>
+{% endblock %}
+
+</div> 
+</body>
+</html>
+
+

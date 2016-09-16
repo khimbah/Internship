@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/img/<img>")
 def image_name(img):
-    f = open('/home/cybernerd/Work/Internship/MyWebPages/Built-ins_WebPages', 'r')
+    f = open('/home/cybernerd/Work/Internship/MyWebPages/Built-ins_WebPages/img/', 'r')
     imgdata = f.read()
     f.close()
     return img

@@ -1,0 +1,3 @@
+var OX_c14ee59b = '';
+OX_c14ee59b += "<"+"script src=\"//ebdr3.com/serve?ynjs=1&zid=130152&pid=4474&click=\" type=\"text/javascript\" ><"+"/script><"+"div id=\'beacon_1f0d0e4788\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'http://delivery.inserthtml.com/www/delivery/lg.php?bannerid=33&amp;campaignid=2&amp;zoneid=35&amp;OACCAP=1000000000&amp;OASCCAP=2147483647&amp;loc=http%3A%2F%2Fcssreset.com%2Fhow-to-keep-footer-at-bottom-of-page-with-css%2F&amp;referer=https%3A%2F%2Fwww.google.com&amp;cb=1f0d0e4788\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+document.write(OX_c14ee59b);

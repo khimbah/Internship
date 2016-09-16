@@ -1,0 +1,51 @@
+{% extends "navigation_bar.html" %}
+
+
+<div class="container-fluid">
+ {% block content %}
+ <div class="row">
+  <div class="col-sm-3 container">
+   <div id="sidebar-L"  class="jumbotron"><p>Making an order is easy and cheap, you just <a href="#">click</a> and we take care of everything!</p></div>
+  </div>
+ <div class="col-sm-6 container">
+  <div  id="content"  class="jumbotron center-block" sytle="overflow: scroll;">
+   <br>  
+     <div class="col-centered center-block"><a href="{{url_for('carousel')}}" class="img-thumbnail">
+     <img src="/img/content_image.jpeg"  class="img-responsive img-fluid" height="640" width="480">
+     </a><br><caption>Beauty in display!</caption></div>
+   <br>
+
+     <div class="col-centered center-block"><a href="{{url_for('carousel')}}" class="img-thumbnail">
+     <img src="/img/P07-03-13_10.07.jpg" class="img-responsive img-fluid" height="640" width="480">
+     </a><br> <caption>Brown kitchen with granite stone</caption></div>
+   <br>
+
+     <div class="col-centered center-block"><a href="{{url_for('carousel')}}" class="img-thumbnail">
+     <img src="/img/20150430_163649.jpg" class="img-responsive img-fluid" height="640" width="480">
+     </a><br><caption>Compact built-in wardrobe</caption></div>
+  <br>
+   
+     <div class="col-centered center-block"><a href="{{url_for('carousel')}}" class="img-thumbnail">
+     <img src="/img/20150713_084842.jpg" class="img-responsive img-fluid" height="640" width="480">
+     </a><br><caption>Spacious kitchen with hood</caption></div>
+  <br> 
+  </div>
+ </div>
+  <div class="col-sm-3 container">
+   <div id="sidebar-R"  class="jumbotron">
+   <script>
+    function blinker() {
+     $('.blinking').fadeOut(1000);
+     $('.blinking').fadeIn(1000);
+    }
+     setInterval(blinker, 1000);
+   </script>
+   <p class="blinking"> 
+    For any queries please send us an email at </p><h4><a href="#">khihmbah@gmail.com</a></h4>.</div>
+  </div>
+ </div>
+ {% endblock %}
+</div>
+
+
+

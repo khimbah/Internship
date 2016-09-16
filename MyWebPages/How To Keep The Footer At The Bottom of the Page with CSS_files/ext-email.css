@@ -1,0 +1,55 @@
+#ext-modal-form .ajax-loader {
+  background: url(../images/ajax-loader.gif) no-repeat center center;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  position: relative;
+  top: 5px;
+  display: inline-block;
+}
+#ext-modal-form .modal-footer {
+	text-align: right;
+}
+#ext-modal-form .submit-action {
+	display: inline-block;
+}
+.ui-dialog .ui-dialog-titlebar {
+	padding: 0 !important;
+	background: transparent !important;
+	border: 0 !important;
+}
+.ui-widget-overlay {
+  background: #000 !important;
+}
+.ui-dialog {
+  text-align: center;
+}
+.ui-dialog input[type="text"] {
+ 	max-width: 100%;
+ 	height: 30px;
+ 	margin-top: 10px;
+ }
+ .ui-dialog input {
+ 	margin-bottom: 10px;
+}
+#ext-modal-form .messages .error {
+	color: red;
+}
+#ext-modal-form .messages .success {
+	color: green;
+}
+a.ext-email {
+  background: #89BDD3;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 14px;
+  display: inline-block;
+  margin: 5px 0;
+}
+a.ext-email:hover {
+  text-decoration: none;
+  background: #325ca2;
+}
+.modal-html-desc .link-name {
+  font-weight: bold;
+}

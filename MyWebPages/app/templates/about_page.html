@@ -1,0 +1,49 @@
+{% extends "navigation_bar.html" %}
+
+<style>
+ .img-circle {
+    -webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -moz-transform: rotate(90deg);   /* Firefox */
+    -ms-transform: rotate(90deg);   /* IE 9 */
+    -o-transform: rotate(90deg);   /* Opera */
+    transform: rotate(90deg);
+} 
+</style>
+<div class="container-fluid">
+ <div class="row">{% block content %}
+  <div id="sidebar-L" class="col-md-3 container">
+   <img src="img/20150802_113751.jpg" class="img img-circle img-responsive" style="transform: rotate(90deg);" height="100%" width="100%"></img><br>
+   <br>
+  
+   <div class="jumbotron">
+    <p>I am Khumbulani Mavundla,&nbsp;<i>Founder and CEO of ARBITER</i>.<br><br> I specialise in designing and installing built in cupboards.<br>We have been serving our clients for 12 years now, approximately 93% of which are happy with our work.<br>On our navigation bar click on Gallery to view our work or click the image at the center of this page.<br>If you like our work please click on Contacts on the navigation bar and fill in your detailes and we will contact you.</p>
+    <!-- place your tutorials or latest news here (topically)  -->
+   </div>
+
+</div>
+
+  <div class="col-md-6 container">
+   <div class="jumbotron">
+    <P>
+     <a href="{{url_for('products')}}">
+      <img src="img/content_image.jpeg" class="img-responsive img-thumbnail" height="640" width="480">
+     </a><br><caption style="color:black;">Spacious kitchen Cabinets</caption>
+    </P> 
+     <br> 
+     <p id="content" style="color:black;">We are built in experts providing and installing cupboards, tiling and granite stones<br>
+      for beautiful and appealing kitchens, bedrooms,living rooms, bathrooms, dinning rooms and verandas.<br>
+      We offer different kinds of wood quality with different pricing depending on quality.<br>
+      Our products range from TV stands, wardrobes, kitchen suits and more.<br>
+      We also provide floor and tiling services for different room types, like living rooms,<br> 
+      kitchens, bath rooms, dinning rooms and verandas.<br>We also offer painting and renovation if requested.  
+     <!-- place your content here  --> 
+     </p>
+    </div>
+   </div>
+
+   <div id="sidebar-R" class="col-md-3 container"><div class="jumbotron"><p><h3>Try something new, <a href="http://127.0.0.1:5000/signup"><i>transform your kitchen!</i></a></h3>.</p>
+    </div>
+  <!-- place external links here  --></div>
+ </div>
+ {% endblock %}
+</div>   
