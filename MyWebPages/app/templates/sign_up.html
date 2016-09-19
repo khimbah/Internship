@@ -9,7 +9,7 @@
   <div class="col-sm-3 container-fluid"><div class="jumbotron"><h4><b>Feel free to Sign up!</b></h4>&nbsp;<a class="em em-arrow_right"></a></div></div>
  
  <div class="col-sm-6 container">
-   <form class="form-horizontal" action="http://127.0.0.1:5000/" method="POST">
+   <form class="form-horizontal" action="http://127.0.0.1:5000/signup" method="POST">
     <div class="form-group col-centered" style="width:400px; margin:0 auto; color:black;">
      <label for="username">Choose Username</label>
      <input type="text" name="name" class="form-control">
@@ -24,11 +24,45 @@
     </div>
    </form>
    <br> 
-     <button class="btn btn-info btn-md center-block col-sm-offset-1 col-sm-20 form-cobtrol" type="button" style="margin:0 auto;">Sign up</button>
+     <button class="btn btn-info btn-md center-block col-sm-offset-1 col-sm-20 form-cobtrol" type="submit" style="margin:0 auto;">Sign up</button>
     <br> 
  </div>
 
-  <div class="col-sm-3 container"><div class="jumbotron">againer, this is the jumbotron class</div></div>
+  <div class="col-sm-3 container"><div class="jumbotron"><div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/L_Küche_2015.jpg" alt="..."  width="200" height="200">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/dam-images-decor-2013-01-white-kitchens-white-kitchens-01.jpg" alt="..." width="200" height="200">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/HKITC111_After-Yellow-Kitchen-Cabinets-Close_4x3.jpg.rend.hgtvcom.616.462.jpeg" alt="..." width="200" height="200">
+      <div class="carousel-caption">
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel --></div></div>
  </div>
 </div>
 {% endblock %}
