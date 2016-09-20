@@ -3,26 +3,28 @@
   .form-group, .btn{margin: auto;} 
 </style>
 {% block content %}
-<p><h1>sign_up page under construction</h1></p>
+<p><h1 style="text-align:center;">Signup or login to view your accounts or profile</h1></p><br>
 <div class="container-fluid">
  <div class="row">
   <div class="col-sm-3 container-fluid"><div class="jumbotron"><h4><b>Feel free to Sign up!</b></h4>&nbsp;<a class="em em-arrow_right"></a></div></div>
  
  <div class="col-sm-6 container">
-   <form class="form-horizontal" action="http://127.0.0.1:5000/signup" method="POST">
+  <div class="jumbotron">
+   <form class="form-horizontal" action="http://127.0.0.1:5000/sign_up_form.py" method="POST">
     <div class="form-group col-centered" style="width:400px; margin:0 auto; color:black;">
      <label for="username">Choose Username</label>
-     <input type="text" name="name" class="form-control">
+     <input type="text" name="username" class="form-control">
     </div><br>
     <div class="form-group col-centered" style="width:400px; margin:0 auto; color:black;">
      <label for="password">Create Password</label>
-     <input type="text" name="name" class="form-control">
+     <input type="text" name="password" class="form-control">
     </div><br>
     <div class="form-group col-centered" style="width:400px; margin:0 auto; color:black;">
      <label for="confirmpassword">Confirm Password</label>
-     <input type="text" name="name" class="form-control">
+     <input type="text" name="confirmpassword" class="form-control">
     </div>
    </form>
+  </div>
    <br> 
      <input class="btn btn-info btn-md center-block col-sm-offset-1 col-sm-20 form-cobtrol" type="submit" style="margin:0 auto;" value="Submit Button">
     <br> 

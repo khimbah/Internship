@@ -1,26 +1,25 @@
-from flask import Flask, send_from_directory, redirect, url_for, request, render_template
+from flask import Flask,flash, send_from_directory, redirect, url_for, request, render_template
 from flask import Response
-#from open_site.py.database import db_session
-from flask_login import login_required, current_user
-
-
+from sign_up_form import RegistrationForm
 app = Flask(__name__, static_folder='/home/cybernerd/Work/Internship/MyWebPages/app/', template_folder='/home/cybernerd/Work/Internship/MyWebPages/app/templates/')
 app.debug=True
-
-#@app.teardown_appcontext
-#def shutdown_session(exception=None):
-#    db_session.remove()
+app.secret_key = 'arizonazyco'
 
 @app.route('/contact_handler', methods = ['POST','GET'])
 def contact_handler():
     if request.method=='POST':
+       username = request.form['username']
+       print("<h3>Welcome to our site </h3>'" + username + "'")
        email = request.form['email']
-       print("The email address is '" + email + "'")
-       return redirect('/')
+       print("Your email address is '" + email + "'")
+       return render_template('sign_up.html')
     else:
+       username = request.form.get['username']
+       print("<h3>Welcome to our site </h3>'" + username + "'")
        email = request.form.get['email']
-       print("The email address is '" + email + "'")
-       return redirect('/')   
+       print("Your email address is '" + email + "'")
+       return render_template('sign_up.html')   
+
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -29,14 +28,11 @@ def signup():
         user = User(form.username.data, form.password.data,
                     form.confirmpassword.data)
         if form.password.data==form.confirmpassword.data:
-           db_session.add(user)
            flash('Thanks for registering')
            return redirect(url_for('login'))
     else:
-           flash("sorry, either password doesn't match or username was not provided")
-    return pass
-       
-    return render_template('signup.html', form=form)
+       flash("sorry, either password doesn't match or username was not provided")
+       return render_template('sign_up.html', form=form)
 
 @app.route('/')
 def home():
@@ -55,14 +51,20 @@ def login():
     return render_template('login.html')
 
 @app.route('/profile')
-@login_required
 def profile():
-    return render_template('/security/profile.html')
+    form = RegistrationForm(request.form)
+    if form.validate():
+       return render_template('/security/profile.html')
+    else:
+       return render_template('sign_up.html', form=form)
 
 @app.route('/accounts')
-@login_required
 def accounts():
-    return render_template('/security/accounts.html')
+    form = RegistrationForm(request.form)
+    if form.validate():
+       return render_template('/security/accounts.html')
+    else:
+       return render_template('sign_up.html', form=form)
 
 
 @app.route('/navigation/')
