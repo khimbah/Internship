@@ -1,7 +1,10 @@
 {% extends "navigation_bar.html" %}
 <style>
-  .form-group, .btn{margin: auto;} 
+  .form-group, .btn{margin: auto;}
 </style>
+<script>
+$document. $('#username','#password','#confirmpassword').val("")
+</script>
 {% block content %}
 <p><h1 style="text-align:center;">Signup or login to view your accounts or profile</h1></p><br>
 <div class="container-fluid">
@@ -26,7 +29,7 @@
    </form>
   </div>
    <br> 
-     <input class="btn btn-info btn-md center-block col-sm-offset-1 col-sm-20 form-cobtrol" type="submit" style="margin:0 auto;" value="Submit Button">
+     <input class="btn btn-info btn-md center-block col-sm-offset-1 col-sm-20 form-cobtrol" type="submit" style="margin:0 auto;" value="Submit">
     <br> 
  </div>
 
