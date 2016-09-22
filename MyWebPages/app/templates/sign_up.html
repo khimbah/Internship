@@ -1,11 +1,16 @@
 {% extends "navigation_bar.html" %}
+
+{% block content %}
 <style>
   .form-group, .btn{margin: auto;}
 </style>
 <script>
-$document. $('#username','#password','#confirmpassword').val("")
+ $(document).ready(function(){ 
+ $(#submit).click(function(){ 
+ $('#username','#password','#confirmpassword').val("")});
+});
 </script>
-{% block content %}
+
 <p><h1 style="text-align:center;">Signup or login to view your accounts or profile</h1></p><br>
 <div class="container-fluid">
  <div class="row">

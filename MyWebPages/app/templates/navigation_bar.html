@@ -81,6 +81,16 @@ setInterval(blinker, 1000);
    max-width: 100%;
  }
   </style>
+  <style>
+ #rotate-img {animation-name:rotate-img;
+   -moz-animation-duration:4s;}
+
+   /* Standard syntax */
+    @keyframes example {
+    from {-moz-transform:rotateY(0deg);}
+    to {transform:rotateY(360deg);}
+    }
+  </style>
 
   {% endblock %} 
 

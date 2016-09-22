@@ -5,21 +5,22 @@ app = Flask(__name__, static_folder='/home/cybernerd/Work/Internship/MyWebPages/
 app.debug=True
 app.secret_key = 'arizonazyco'
 
-@app.route('/contact_handler', methods = ['POST','GET'])
-def contact_handler():
+@app.route('/contacts', methods = ['POST','GET'])
+def contacts():
     if request.method=='POST':
        username = request.form['username']
        print("<h3>Welcome to our site </h3>'" + username + "'")
        email = request.form['email']
        print("Your email address is '" + email + "'")
        return render_template('sign_up.html')
-    else:
+    elif:
        username = request.form.get['username']
        print("<h3>Welcome to our site </h3>'" + username + "'")
        email = request.form.get['email']
        print("Your email address is '" + email + "'")
        return render_template('sign_up.html')   
-
+    else:
+       return render_template('contacts_page.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -38,9 +39,9 @@ def signup():
 def home():
     return render_template('home_page.html')
 
-@app.route('/contacts')
-def contacts():
-    return render_template('contacts_page.html')
+#@app.route('/contacts')
+#def contacts():
+#    return render_template('contacts_page.html')
 
 #@app.route('/signup')
 #def signup():     
@@ -48,7 +49,9 @@ def contacts():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    if request.method=='POST':
+       flash('sorry this site is still under construction')
+       return render_template('login.html')
 
 @app.route('/profile')
 def profile():
