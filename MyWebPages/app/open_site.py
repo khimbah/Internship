@@ -5,69 +5,74 @@ app = Flask(__name__, static_folder='/home/cybernerd/Work/Internship/MyWebPages/
 app.debug=True
 app.secret_key = 'arizonazyco'
 
-@app.route('/contacts', methods = ['POST','GET'])
-def contacts():
-    if request.method=='POST':
-       username = request.form['username']
-       print("<h3>Welcome to our site </h3>'" + username + "'")
-       email = request.form['email']
-       print("Your email address is '" + email + "'")
-       return render_template('sign_up.html')
-    elif:
-       username = request.form.get['username']
-       print("<h3>Welcome to our site </h3>'" + username + "'")
-       email = request.form.get['email']
-       print("Your email address is '" + email + "'")
-       return render_template('sign_up.html')   
-    else:
-       return render_template('contacts_page.html')
+#@app.route('/contactus', methods = ['POST','GET'])
+#def contactus():
+#    if request.method=='POST':
+#       username = request.form['username']
+#       print("<h3>Welcome to our site </h3>'" + username + "'")
+#       email = request.form['email']
+#       print("Your email address is '" + email + "'")
+#       return 
+#    elif request.method=='GET':
+#       username = request.form.get['username']
+#       print("<h3>Welcome to our site </h3>'" + username + "'")
+#       email = request.form.get['email']
+#       print("Your email address is '" + email + "'")
+#       return    
+#    else:
+#       return render_template('contacts_page.html')
 
-@app.route('/signup', methods=['GET', 'POST'])
-def signup():
-    form = RegistrationForm(request.form)
-    if request.method == 'POST' and form.validate():
-        user = User(form.username.data, form.password.data,
-                    form.confirmpassword.data)
-        if form.password.data==form.confirmpassword.data:
-           flash('Thanks for registering')
-           return redirect(url_for('login'))
-    else:
-       flash("sorry, either password doesn't match or username was not provided")
-       return render_template('sign_up.html', form=form)
+#@app.route('/signup', methods=['GET', 'POST'])
+#def signup():
+#    form = RegistrationForm(request.form)
+#    if request.method == 'POST' and form.validate():
+#        user = User(form.username.data, form.password.data,
+#                    form.confirmpassword.data)
+#        if form.password.data==form.confirmpassword.data:
+#           flash('Thanks for registering')
+#           return redirect(url_for('login'))
+#    else:
+#       flash("sorry, either password doesn't match or username was not provided")
+#       return render_template('sign_up.html', form=form)
 
 @app.route('/')
 def home():
+    if request.method=='POST':
+       return 'Welcome to our site!'
     return render_template('home_page.html')
 
-#@app.route('/contacts')
-#def contacts():
-#    return render_template('contacts_page.html')
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts_page.html')
 
+@app.route('/contactus')
+def contactus():
+    return render_template('contactus.html')
 #@app.route('/signup')
 #def signup():     
 #    return render_template('sign_up.html')
 
-@app.route('/login')
-def login():
-    if request.method=='POST':
-       flash('sorry this site is still under construction')
-       return render_template('login.html')
+#@app.route('/login')
+#def login():
+#    if request.method=='POST':
+#       flash('sorry this site is still under construction')
+#       return render_template('login.html')
 
-@app.route('/profile')
-def profile():
-    form = RegistrationForm(request.form)
-    if form.validate():
-       return render_template('/security/profile.html')
-    else:
-       return render_template('sign_up.html', form=form)
+#@app.route('/profile')
+#def profile():
+#    form = RegistrationForm(request.form)
+#    if form.validate():
+#       return render_template('/security/profile.html')
+#    else:
+#       return render_template('sign_up.html', form=form)
 
-@app.route('/accounts')
-def accounts():
-    form = RegistrationForm(request.form)
-    if form.validate():
-       return render_template('/security/accounts.html')
-    else:
-       return render_template('sign_up.html', form=form)
+#@app.route('/accounts')
+#def accounts():
+#    form = RegistrationForm(request.form)
+#    if form.validate():
+#       return render_template('/security/accounts.html')
+#    else:
+#       return render_template('sign_up.html', form=form)
 
 
 @app.route('/navigation/')
