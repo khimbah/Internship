@@ -1,4 +1,4 @@
-How to download and install Prometheus:
+#How to download and install Prometheus:
 
 Prometheus Python Client:
 
@@ -6,6 +6,7 @@ Step one:
 In the ubuntu terminal run:
 pip install prometheus_client,
 or sudo apt-get install prometheus_client, if the first does not work
+or just visit https://prometheus.io/
 
 Step two: 
 paste this code in your Python interpreter:
@@ -34,3 +35,8 @@ if __name__ == '__main__':
 
 Step three:
  Visit http://localhost:8000/ to view the metrics.
+
+#How to download and/or install Prometheus Server:
+You can just go to https://prometheus.io/
+or sudo apt-get install prometheus
+or pip install prometheus 
