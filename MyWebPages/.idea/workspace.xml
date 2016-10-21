@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9153b32-f0df-4028-b442-cb32728e66c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fibonacciNumbers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iterobject.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bisectionSearch.py" afterPath="$PROJECT_DIR$/bisectionSearch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/evalQuadratic.py" afterPath="$PROJECT_DIR$/evalQuadratic.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcdIter.py" afterPath="$PROJECT_DIR$/gcdIter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iterPower.py" afterPath="$PROJECT_DIR$/iterPower.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oddNumber.py" afterPath="$PROJECT_DIR$/oddNumber.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prometheusExample.py" afterPath="$PROJECT_DIR$/prometheusExample.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../aboutPrometheus" afterPath="$PROJECT_DIR$/../aboutPrometheus" />
     </list>
     <ignored path="MyWebPages.iws" />
     <ignored path=".idea/workspace.xml" />
